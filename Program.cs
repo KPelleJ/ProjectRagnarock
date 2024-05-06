@@ -1,3 +1,5 @@
+using ProjectRagnarock.Models;
+
 namespace ProjectRagnarock
 {
     public class Program
@@ -8,6 +10,7 @@ namespace ProjectRagnarock
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddSingleton<IExpoRepository,ExpoRepository>();
 
             var app = builder.Build();
 
