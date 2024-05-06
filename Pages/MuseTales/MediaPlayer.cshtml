@@ -1,5 +1,39 @@
 ﻿@page
+@using ProjectRagnarock.Models
 @model ProjectRagnarock.Pages.MuseTales.MediaPlayerModel
 @{
+    ViewData["Title"] = "Media player";
 }
-This is the media player
+
+
+<header>
+    <h1 align="center"></h1>
+</header>
+<div align="center">
+ 
+</div>
+@foreach (var item in Model.AllExpos)
+{
+    if (item.Id == Model.ExpoId)
+    {
+        <header>
+            <h1 align="center">@item.Name</h1>
+        </header>
+        <div align="center">
+            <img src="~/Images/@item.PicturePath" class="img-fluid" alt="@item.Name" width="125" height="125">
+        </div>
+        <footer align="center">
+            <div class="wrapper">
+                <div class="scroll-text">
+                 <h2 align="center">@item.Name</h2>
+                 <p align="center">@item.Description</p>
+                </div>
+            </div>
+
+        </footer>
+    }
+
+}
+
+
+

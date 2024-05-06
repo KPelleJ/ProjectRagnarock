@@ -7,7 +7,7 @@
         private string _soundFilePath;
         private string _picturePath;
         private int _id;
-        private int _idCounter = 1;
+        private static int _idCounter = 1;
 
         public Expo(string name, string description, string soundFilePath, string picturePath)
         {
@@ -15,8 +15,7 @@
             _description = description;
             _soundFilePath = soundFilePath;
             _picturePath = picturePath;
-            _id = _idCounter;
-            _idCounter++;
+            _id = _idCounter++;
         }
 
         public string Name 

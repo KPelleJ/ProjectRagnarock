@@ -10,7 +10,9 @@
 <div align="center">
     @foreach(var item in Model.AllExpos)
     {
-        <a href="/MuseTales/MediaPlayer" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">@item.Name</a>
+        <!-- Display button with Name as label -->
+        <a href="/MuseTales/MediaPLayer?id=@item.Id" class="btn btn-primary">@item.Name</a>
+        
     }
 </div>
 
