@@ -8,7 +8,12 @@
         
         public ExpoRepository() 
         {
-            expos.Add(new Expo("jhon", "entotre", "forhelvet", "kekw"));
+            expos = new List<Expo>();
+            expos.Add(new Expo("60'ernes syrede Rock", "entotre", "forhelvet", "kekw"));
+            expos.Add(new Expo("Metal igennem tiderne", "entotre", "forhelvet", "kekw"));
+
+            _businessName = "Ragnarock";
+            _logoImagePath = "RagnarockLogo.png";
         }
 
         public string BusinessName

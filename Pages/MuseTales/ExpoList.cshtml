@@ -1,0 +1,17 @@
+﻿@page
+@using ProjectRagnarock.Models
+@model ProjectRagnarock.Pages.MuseTales.ExpoListModel
+@{
+    ViewData["Title"] = "Liste over alle udstillinger";
+}
+<header>
+    <h1 align="center">Test for satan da Bobby</h1>
+</header>
+<div align="center">
+    @foreach(var item in Model.AllExpos)
+    {
+        <a href="/MuseTales/MediaPlayer" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">@item.Name</a>
+    }
+</div>
+
+
