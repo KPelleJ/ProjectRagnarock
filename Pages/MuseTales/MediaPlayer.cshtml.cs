@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using NAudio.Wave;
 using ProjectRagnarock.Models;
 
 namespace ProjectRagnarock.Pages.MuseTales
