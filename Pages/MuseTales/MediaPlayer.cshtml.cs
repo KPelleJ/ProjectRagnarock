@@ -27,7 +27,7 @@ namespace ProjectRagnarock.Pages.MuseTales
         public void OnPost(int id)
         {
             _expoId = id;
-            _expoRepository.PlaySound();
+            _expoRepository.PlaySound(_expoId);
         }
     }
 }

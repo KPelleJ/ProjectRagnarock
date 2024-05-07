@@ -40,6 +40,16 @@ namespace ProjectRagnarock.Models
             return _expos;
         }
 
+        public void PlaySound()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PlaySound(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void RemoveExpo(int id)
         {
             throw new NotImplementedException();

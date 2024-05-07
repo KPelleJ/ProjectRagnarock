@@ -12,5 +12,7 @@
         public void UpdateExpo(int id);
         public void RemoveExpo(int id);
 
+        public void PlaySound(int id);
+
     }
 }
