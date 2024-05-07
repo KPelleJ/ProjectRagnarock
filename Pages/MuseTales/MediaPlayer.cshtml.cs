@@ -19,11 +19,15 @@ namespace ProjectRagnarock.Pages.MuseTales
 
         public int ExpoId
         {  get { return _expoId; } }
-
         public IActionResult OnGet(int id)
         {
             _expoId = id;
             return Page();
+        }
+        public void OnPost(int id)
+        {
+            _expoId = id;
+            _expoRepository.PlaySound();
         }
     }
 }

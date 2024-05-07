@@ -1,0 +1,18 @@
+﻿@page
+@model ProjectRagnarock.Pages.AdminLoginModel
+@{
+}
+<h1>Admin Login</h1>
+
+<form method="post">
+    <div>
+        <label for="_username">Username:</label>
+        <input type="text" id="_username" name="_username" />
+    </div>
+    <div>
+        <label for="_password">Password:</label>
+        <input type="_password" id="_password" name="_password" />
+        <span asp-validation-for="_password" class="text-danger"></span>
+    </div>
+    <button type="submit">Login</button>
+</form>

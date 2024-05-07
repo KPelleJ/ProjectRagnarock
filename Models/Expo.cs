@@ -1,4 +1,6 @@
-﻿namespace ProjectRagnarock.Models
+﻿using NAudio.Wave;
+
+namespace ProjectRagnarock.Models
 {
     public class Expo
     {
@@ -9,7 +11,7 @@
         private int _id;
         private static int _idCounter = 1;
 
-        public Expo(string name, string description, string soundFilePath, string picturePath)
+        public Expo(string name, string description,string soundFilePath, string picturePath)
         {
             _name = name;
             _description = description;
