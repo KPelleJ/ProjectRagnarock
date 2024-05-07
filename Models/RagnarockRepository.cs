@@ -61,7 +61,14 @@ namespace ProjectRagnarock.Models
                 expo.OutPutDevice.Play();
                 }
                 }
+                // Playback stopped, clean up resources
+                expo.OutPutDevice.Dispose();
+                expo.AudioFile.Dispose();
+
+                expo.AudioFile = new AudioFileReader(@"C:\Users\nqvis\OneDrive\Skrivebord\MediaplayerTest\Mediaplayertest\Mediaplayertest\wwwroot\SoundFIle\Voicy_gnome sound.mp3");
+                expo.OutPutDevice = new WaveOutEvent();
             }
+
         }
     }
 }
