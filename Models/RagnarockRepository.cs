@@ -1,4 +1,6 @@
-﻿namespace ProjectRagnarock.Models
+﻿using NAudio.Wave;
+
+namespace ProjectRagnarock.Models
 {
     public class RagnarockRepository:IExpoRepository
     {
@@ -6,6 +8,8 @@
         private string _logoImagePath;
         private string _businessDescription;
         private List<Expo> _expos;
+        AudioFileReader audioFile = new AudioFileReader(@"C:\Users\nqvis\OneDrive\Skrivebord\ProRagnarock\wwwroot\Sound\Voicy_gnome sound.mp3");
+        WaveOutEvent outputDevice;
         
         public RagnarockRepository() 
         {
@@ -31,7 +35,6 @@
         {
             
         }
-
         public List<Expo> GetAll()
         {
             return _expos;
@@ -45,6 +48,24 @@
         public void UpdateExpo(int id)
         {
             throw new NotImplementedException();
+        }
+        public void PlaySound()
+        {
+            if (outputDevice.PlaybackState != PlaybackState.Playing)
+            {
+                outputDevice.Init(audioFile);
+                outputDevice.Play();
+                outputDevice.PlaybackStopped += OutputDevice_PlaybackStopped;
+            }
+        }
+        private void OutputDevice_PlaybackStopped(object sender, StoppedEventArgs e)
+        {
+            // Playback stopped, clean up resources
+            outputDevice.Dispose();
+            audioFile.Dispose();
+
+            audioFile = new AudioFileReader(@"C:\Users\nqvis\OneDrive\Skrivebord\MediaplayerTest\Mediaplayertest\Mediaplayertest\wwwroot\SoundFIle\Voicy_gnome sound.mp3");
+            outputDevice = new WaveOutEvent();
         }
     }
 }
