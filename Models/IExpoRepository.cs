@@ -12,9 +12,5 @@
         public void UpdateExpo(int id);
         public void RemoveExpo(int id);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f08ede1004e999f5f627a2b25e1510e88e404f44
     }
 }
