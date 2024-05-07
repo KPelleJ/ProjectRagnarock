@@ -6,19 +6,13 @@ namespace ProjectRagnarock.Models
     {
         private string _businessName;
         private string _logoImagePath;
-        private AudioFileReader _audio;
-        private AudioFileReader _audio2;
-        private WaveOutEvent _wave;
         private List<Expo> expos;
-        
-        public ExpoRepository() 
+
+        public ExpoRepository()
         {
             expos = new List<Expo>();
-            _wave = new WaveOutEvent();
-            _audio = new AudioFileReader(@"C:\Users\nqvis\OneDrive\Skrivebord\ProRagnarock\wwwroot\Sound\naked.wav");
-            _audio2 = new AudioFileReader(@"C:\Users\nqvis\OneDrive\Skrivebord\ProRagnarock\wwwroot\Sound\Voicy_gnome sound.mp3");
-            expos.Add(new Expo("60'ernes syrede Rock", "Take me oooooooooooooooooooooooooooonnnnnnnnnnnnnnnnn, take on me.", "Forhelvete", "PsykRock.png", _audio));
-            expos.Add(new Expo("Metal igennem tiderne", "Der var engang en svensk mand ved navn Lars, der elskede at eksperimentere i køkkenet. Han prøvede alt fra traditionelle svenske retter til mere eksotiske opskrifter fra fjerne lande. Men der var én ting, han aldrig kunne mestre - at lave medisterpølse.\r\n\r\nLars havde hørt så meget om den danske delikatesse, medisterpølse, og besluttede sig for at prøve at lave det selv. Han fandt en opskrift på nettet, købte alle ingredienserne og gik i gang med entusiasme.\r\n\r\nMen hver gang Lars forsøgte sig med medisterpølsen, endte resultatet altid forkert. Enten blev pølsen for tør og kedelig, eller også blev den alt for fedtet og smattede. Uanset hvor meget han prøvede, kunne Lars ikke ramme den helt rigtige konsistens og smag.\r\n\r\nHan brugte timer i køkkenet, æltede farsen, tilsatte krydderier og formede pølserne med omhu, men intet hjalp. Til sidst gav Lars op. Han erkendte, at medisterpølsen simpelthen var en kunst, han ikke kunne mestre.\r\n\r\nMen i stedet for at lade sig slå ud, besluttede Lars sig for at støtte de lokale delikatessebutikker og købe sin medisterpølse derfra fremover. Selvom han aldrig blev en mesterkok inden for medisterpølsen, kunne han stadig nyde den på sin tallerken, perfekt tilberedt af dem, der virkelig forstod kunsten.", "forhelvet", "Metal.png", _audio2));
+            expos.Add(new Expo("60'ernes syrede Rock", "Take me oooooooooooooooooooooooooooonnnnnnnnnnnnnnnnn, take on me.", "Forhelvete", "PsykRock.png"));
+            expos.Add(new Expo("Metal igennem tiderne", "Der var engang en svensk mand ved navn Lars, der elskede at eksperimentere i køkkenet. Han prøvede alt fra traditionelle svenske retter til mere eksotiske opskrifter fra fjerne lande. Men der var én ting, han aldrig kunne mestre - at lave medisterpølse.\r\n\r\nLars havde hørt så meget om den danske delikatesse, medisterpølse, og besluttede sig for at prøve at lave det selv. Han fandt en opskrift på nettet, købte alle ingredienserne og gik i gang med entusiasme.\r\n\r\nMen hver gang Lars forsøgte sig med medisterpølsen, endte resultatet altid forkert. Enten blev pølsen for tør og kedelig, eller også blev den alt for fedtet og smattede. Uanset hvor meget han prøvede, kunne Lars ikke ramme den helt rigtige konsistens og smag.\r\n\r\nHan brugte timer i køkkenet, æltede farsen, tilsatte krydderier og formede pølserne med omhu, men intet hjalp. Til sidst gav Lars op. Han erkendte, at medisterpølsen simpelthen var en kunst, han ikke kunne mestre.\r\n\r\nMen i stedet for at lade sig slå ud, besluttede Lars sig for at støtte de lokale delikatessebutikker og købe sin medisterpølse derfra fremover. Selvom han aldrig blev en mesterkok inden for medisterpølsen, kunne han stadig nyde den på sin tallerken, perfekt tilberedt af dem, der virkelig forstod kunsten.", "forhelvet", "Metal.png"));
 
             _businessName = "Ragnarock";
             _logoImagePath = "RagnarockLogo.png";
@@ -63,7 +57,7 @@ namespace ProjectRagnarock.Models
             _wave.Dispose();
             _wave.Dispose();
 
-            _audio = new AudioFileReader(@"C:\Users\nqvis\OneDrive\Skrivebord\MediaplayerTest\Mediaplayertest\Mediaplayertest\wwwroot\SoundFIle\Voicy_gnome sound.mp3");
+            _audio2 = new AudioFileReader(@"C:\Users\nqvis\OneDrive\Skrivebord\ProRagnarock\wwwroot\Sound\Voicy_gnome sound.mp3");
             _wave = new WaveOutEvent();
         }
 

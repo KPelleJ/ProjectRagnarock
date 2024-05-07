@@ -5,16 +5,14 @@ namespace ProjectRagnarock.Models
     public class Expo
     {
         private string _name;
-        private AudioFileReader _audioFile;
         private string _description;
         private string _soundFilePath;
         private string _picturePath;
         private int _id;
         private static int _idCounter = 1;
 
-        public Expo(string name, string description,string soundFilePath, string picturePath, AudioFileReader audioFile)
+        public Expo(string name, string description,string soundFilePath, string picturePath)
         {
-            _audioFile = audioFile;
             _name = name;
             _description = description;
             _soundFilePath = soundFilePath;
