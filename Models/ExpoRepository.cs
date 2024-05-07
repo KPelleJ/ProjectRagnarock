@@ -1,12 +1,11 @@
 ﻿using NAudio.Wave;
+using System.Media;
 
 namespace ProjectRagnarock.Models
 {
     public class ExpoRepository:IExpoRepository
     {
         private string _businessName;
-        WaveOutEvent wave;
-        AudioFileReader audioFile;
         private string _logoImagePath;
         private List<Expo> expos;
 
