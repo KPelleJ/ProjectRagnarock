@@ -19,7 +19,32 @@ html {
 
 body {
   margin-bottom: 60px;
-  overflow: hidden;
+  overflow:hidden;
+}
+
+.wrapper{
+    background: rgb(20, 20, 20);
+    display:flex;
+    height:180%;
+    width:40%;
+    margin:0 auto;
+    overflow:hidden;
+    perspective:450px;
+}
+
+.scroll-text{
+    color: #ffc909;
+    font:3vw;
+    line-height: 1.5em;
+    font-weight:bold;
+    text-align:justify;
+    position: relative;
+    animation: scroll 120s linear forwards;
+}
+
+@keyframes scroll{
+    from {top:0;}
+    to {top:-2000px;}
 }
 
 
