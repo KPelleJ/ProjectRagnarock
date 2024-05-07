@@ -26,6 +26,10 @@ namespace ProjectRagnarock.Models
         public string LogoImagePath
         {  get { return _logoImagePath; } }
 
+        public string BusinessDescription => throw new NotImplementedException();
+
+        public List<Expo> Expos => throw new NotImplementedException();
+
         public void CreateExpo(string name, string description, string soundPath, string imagePath)
         {
             
