@@ -10,11 +10,13 @@ namespace ProjectRagnarock.Pages.MuseTales
         private int _expoId;
         public List<Expo> AllExpos;
         private readonly IExpoRepository _expoRepository;
+        private readonly IMediaPlayer _mediaPlayer;
 
-        public MediaPlayerModel(IExpoRepository expoRepository)
+        public MediaPlayerModel(IExpoRepository expoRepository, IMediaPlayer mediaPlayer)
         {
             _expoRepository = expoRepository;
             AllExpos = expoRepository.GetAll();
+            _mediaPlayer = mediaPlayer;
         }
 
         public int ExpoId
@@ -24,10 +26,10 @@ namespace ProjectRagnarock.Pages.MuseTales
             _expoId = id;
             //return Page();
         }
-        public void OnPost(int id)
+        public void OnPostPlay(int id)
         {
             _expoId = id;
-            _expoRepository.PlaySound(_expoId);
+            _mediaPlayer.PlaySound(_expoId);
         }
     }
 }
