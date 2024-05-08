@@ -43,7 +43,7 @@ namespace ProjectRagnarock.Models
 
         public void CreateExpo(string name, string description, string soundPath, string imagePath)
         {
-            
+            _expos.Add(new Expo(name, description, soundPath, imagePath));   
         }
         public List<Expo> GetAll()
         {
