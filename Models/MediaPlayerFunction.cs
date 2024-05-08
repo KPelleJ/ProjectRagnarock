@@ -5,15 +5,22 @@ namespace ProjectRagnarock.Models
     public class MediaPlayerFunction : IMediaPlayer
     {
         public Expo expo;
-        List<Expo> expoList;
+        private List<Expo> _expos;
         private readonly IMediaPlayer mediaPlayer;
-        public MediaPlayerFunction()
+
+        
+
+        public MediaPlayerFunction(IExpoRepository repo)
         {
-            
+            _expos = repo.GetAll();
         }
+
+        public List<Expo> Expos 
+        { get { return _expos; } }
+        
         public void PlaySound(int id)
         {
-            foreach (Expo expo in expoList)
+            foreach (Expo expo in Expos)
             {
                 if (id == expo.Id)
                 {
