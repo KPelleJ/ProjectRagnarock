@@ -24,8 +24,8 @@
             
         </div>
         <div align="center">
-            <form method="post" asp-page-handler="Play" asp-route-id="@item.Id">
-                <button>Play</button>
+            <form method="post">
+                <button asp-page-handler="Play" asp-route-id="@item.Id">Play</button>
             </form>
         </div>
         <footer align="center">
