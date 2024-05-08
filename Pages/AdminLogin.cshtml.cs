@@ -22,7 +22,7 @@ namespace ProjectRagnarock.Pages
         {
             if (Validation(_username, _password))
             {
-                return RedirectToPage("/AdminDashboard");
+                return RedirectToPage("MuseTales/Expolist");
             }
             else
             {

@@ -20,8 +20,8 @@ namespace ProjectRagnarock.Models
             _soundFilePath = soundFilePath;
             _picturePath = picturePath;
             _id = _idCounter++;
-            AudioFile = new AudioFileReader(soundFilePath);
-            OutPutDevice = new WaveOutEvent();
+            _audioFile = new AudioFileReader(soundFilePath);
+            _outPutDevice = new WaveOutEvent();
         }
 
         public string Name 
