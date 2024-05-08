@@ -42,6 +42,15 @@ body {
     animation: scroll 120s linear forwards;
 }
 
+.still-text {
+    color: #ffc909;
+    font: 3vw;
+    line-height: 1.5em;
+    font-weight: bold;
+    text-align: justify;
+    position: relative;
+}
+
 @keyframes scroll{
     from {top:0;}
     to {top:-2000px;}

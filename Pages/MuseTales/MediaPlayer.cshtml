@@ -30,10 +30,20 @@
         </div>
         <footer align="center">
             <div margin="50% 0 0 0" position="relative" class="wrapper">
+                @if (item.OutPutDevice.PlaybackState == NAudio.Wave.PlaybackState.Playing)
+                {
                 <div class="scroll-text">
-                 <h2 align=center >@item.Name</h2>
-                 <p>@item.Description</p>
-                </div>
+                    <h2 align=center >@item.Name</h2>
+                    <p>@item.Description</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="still-text">
+                        <h2 align=center>@item.Name</h2>
+                        <p>@item.Description</p>
+                    </div>
+                }
             </div>
         </footer>
     }
