@@ -20,21 +20,29 @@
             <h1 align="center">@item.Name</h1>
         </header>
         <div align="center">
-            <img src="~/Images/@item.PicturePath" class="img-fluid" alt="@item.Name" width="250" height="250">
+            <img src="~/Images/@item.PicturePath" class="img-fluid" alt="@item.Name" width="240px" height="350px">
             
         </div>
         <div align="center">
-            <audio controls>
+            <audio controls id="myAudio">
                 <source src="~/Sound/@item.SoundFilePath" type="audio/mp3" />
                 <source src="~/Sound/@item.SoundFilePath" type="audio/vnd.wave" />
-                The system does not support this file
             </audio>
         </div>
+       
         <footer align="center">
-            <div margin="50% 0 0 0" position="relative" class="wrapper">
-                <div class="scroll-text">
-                    <h2 align=center >@item.Name</h2>
-                    <p>@item.Description</p>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            @item.Name
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            @item.Description
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
