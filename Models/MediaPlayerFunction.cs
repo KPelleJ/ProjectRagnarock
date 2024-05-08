@@ -4,8 +4,7 @@ namespace ProjectRagnarock.Models
 {
     public class MediaPlayerFunction : IMediaPlayer
     {
-        public Expo expo;
-        List<Expo> expoList;
+        public List<Expo> expoList;
         private readonly IMediaPlayer mediaPlayer;
         public MediaPlayerFunction()
         {
