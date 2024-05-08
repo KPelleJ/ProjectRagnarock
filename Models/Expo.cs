@@ -10,8 +10,6 @@ namespace ProjectRagnarock.Models
         private string _picturePath;
         private int _id;
         private static int _idCounter = 1;
-        AudioFileReader _audioFile;
-        WaveOutEvent _outPutDevice;
 
         public Expo(string name, string description,string soundFilePath, string picturePath)
         {
@@ -20,8 +18,6 @@ namespace ProjectRagnarock.Models
             _soundFilePath = soundFilePath;
             _picturePath = picturePath;
             _id = _idCounter++;
-            _audioFile = new AudioFileReader(soundFilePath);
-            _outPutDevice = new WaveOutEvent();
         }
 
         public string Name 
@@ -39,7 +35,5 @@ namespace ProjectRagnarock.Models
         public string PicturePath
         { get { return _picturePath; } }
 
-        public AudioFileReader AudioFile { get => _audioFile; set => _audioFile = value; }
-        public WaveOutEvent OutPutDevice { get => _outPutDevice; set => _outPutDevice = value; }
     }
 }

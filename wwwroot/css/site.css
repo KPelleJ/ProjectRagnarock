@@ -22,6 +22,9 @@ body {
   overflow:hidden;
 }
 
+audio{
+}
+
 .wrapper{
     background: rgb(20, 20, 20);
     display:flex;
