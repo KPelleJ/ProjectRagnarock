@@ -1,0 +1,40 @@
+﻿@page
+@model ProjectRagnarock.Pages.MuseTales.CreateExpoTestModel
+@{
+    ViewData["Title"] = "Opret ny expo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+
+    <div class="row">
+        <div class="col">
+            <label>Expo navn</label>
+            <input class="form-control" type="text" asp-for="Expo.Name" name="Name" />
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col">
+            <label>Oplæsningen i tekstform</label>
+            <textarea class="form-control" asp-for="Expo.Description" name="Description" rows="3"></textarea>
+        </div>
+
+        <div class="col">
+            <label>Billede af udstillingen</label>
+            <input asp-for="Expo.PicturePath" type="file" class="" name="PicturePath">
+        </div>
+
+        <div class="col">
+            <label>Vælg lydfil til oplæsning</label>
+            <input asp-for="Expo.SoundFilePath" type="file" class="" name="SoundFilePath">
+        </div>
+
+    </div>
+
+
+    <label> </label>
+    <button class="form-control" type="submit">opret</button>
+
+</form>

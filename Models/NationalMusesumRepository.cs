@@ -1,7 +1,7 @@
 ﻿
 namespace ProjectRagnarock.Models
 {
-    public class NationalMusesumRepository : IExpoRepository
+    public class NationalMusesumRepository //: IExpoRepository
     {
         private string _businessName;
         private string _logoImagePath;
