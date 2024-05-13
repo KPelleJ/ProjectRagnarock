@@ -53,7 +53,7 @@ namespace ProjectRagnarock.Pages
             PinCode = pinCode;
         }
 
-        [Required(ErrorMessage = "Du mangler at skrive kode")]
+        [Required]
         [StringLength(4)]
         [DataType(DataType.Password)]
         [Display(Name = "Pincode")]
