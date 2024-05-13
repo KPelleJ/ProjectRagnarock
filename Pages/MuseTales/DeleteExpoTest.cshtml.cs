@@ -22,16 +22,6 @@ namespace ProjectRagnarock.Pages.MuseTales
             return Page();
         }
 
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            _expoRepository.RemoveExpo(Expo.Id);
-            return RedirectToPage("/MuseTales/ExpoList");
-        }
 
         public IActionResult OnPostDelete(int id)
         {
