@@ -8,14 +8,13 @@ namespace ProjectRagnarock.Pages
     {
         [BindProperty]
         public Credential credential { get; set; }
-        private bool IsValidCredential = false;
 
         List<Credential> credentials = new List<Credential>() {
             new Credential("1111"),
             new Credential("2222"),
             new Credential("3333"),
             new Credential("5656")
-    };
+        };
         public IndexModel()
         {
 
