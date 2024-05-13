@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ProjectRagnarock.Pages
 {
@@ -19,14 +20,11 @@ namespace ProjectRagnarock.Pages
         {
 
         }
-        //public async Task<IActionResult> OnGet()
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        await Task.Delay(5000);
-        //    }
-        //    return RedirectToPage("/Index");
-        //}
+        public IActionResult OnGet()
+        {
+            return Page();
+        }
+
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
@@ -44,21 +42,22 @@ namespace ProjectRagnarock.Pages
             return Page();
         }
     }
-}
-public class Credential
-{
-    public Credential()
+    public class Credential
     {
+        public Credential()
+        {
+
+        }
+        public Credential(string pinCode)
+        {
+            PinCode = pinCode;
+        }
+
+        [Required(ErrorMessage = "Du mangler at skrive kode")]
+        [StringLength(4)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Pincode")]
+        public string PinCode { get; set; }
 
     }
-    public Credential(string pinCode)
-    {
-        PinCode = pinCode;
-    }
-
-    [Required(ErrorMessage = "Du mangler at skrive kode")]
-    [StringLength(4)]
-    [DataType(DataType.Password)]
-    [Display(Name = "Pincode")]
-    public string PinCode { get; set; }
 }
