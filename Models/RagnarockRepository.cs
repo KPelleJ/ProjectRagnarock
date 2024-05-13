@@ -1,4 +1,5 @@
 ﻿using NAudio.Wave;
+using System.Diagnostics.Metrics;
 
 namespace ProjectRagnarock.Models
 {
@@ -41,9 +42,19 @@ namespace ProjectRagnarock.Models
         public List<Expo> Expos
         {  get { return _expos; } }
 
-        public void CreateExpo(string name, string description, string soundPath, string imagePath)
+        public void ExpoId()
         {
-            _expos.Add(new Expo(name, description, soundPath, imagePath));   
+            int counter = 1;
+            foreach (Expo expo in _expos)
+            {
+                expo.Id = counter;
+                counter++;
+            }
+        }
+
+        public void CreateExpo(Expo expo)
+        {
+            _expos.Add(expo);   
         }
         public List<Expo> GetAll()
         {
@@ -52,12 +63,28 @@ namespace ProjectRagnarock.Models
 
         public void RemoveExpo(int id)
         {
-            throw new NotImplementedException();
+            foreach(Expo expo in _expos)
+            {
+                if (expo.Id == id)
+                {
+                    _expos.Remove(expo);
+                    return;
+                }
+            }
         }
 
-        public void UpdateExpo(int id)
+        public void UpdateExpo(Expo expo)
         {
-            throw new NotImplementedException();
+            foreach (Expo ex in _expos)
+            { 
+                if (ex.Id == expo.Id)
+                {
+                    ex.Name = expo.Name;
+                    ex.Description = expo.Description;
+                    ex.PicturePath = expo.PicturePath;
+                    ex.SoundFilePath = expo.SoundFilePath;
+                }
+            }
         }
     }
 }

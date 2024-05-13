@@ -1,4 +1,5 @@
 ﻿using NAudio.Wave;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectRagnarock.Models
 {
@@ -8,8 +9,6 @@ namespace ProjectRagnarock.Models
         private string _description;
         private string _soundFilePath;
         private string _picturePath;
-        private int _id;
-        private static int _idCounter = 1;
 
         public Expo(string name, string description,string soundFilePath, string picturePath)
         {
@@ -17,23 +16,37 @@ namespace ProjectRagnarock.Models
             _description = description;
             _soundFilePath = soundFilePath;
             _picturePath = picturePath;
-            _id = _idCounter++;
+        }
+
+        public Expo()
+        { 
+
         }
 
         public string Name 
-        { get { return _name; } }
+        { 
+          get { return _name; } 
+          set { _name = value; }
+        }
 
         public string Description 
-        { get { return _description; } }
-
-        public int Id 
-        { get { return _id; } }
+        { 
+            get { return _description; }
+            set { _description = value; }
+        }
 
         public string SoundFilePath
-        { get { return _soundFilePath; } }
+        { 
+            get { return _soundFilePath; } 
+            set { _soundFilePath = value; }
+        }
 
         public string PicturePath
-        { get { return _picturePath; } }
+        { 
+            get { return _picturePath; } 
+            set { _picturePath = value; }
+        }
 
+        public int Id { get; set; }
     }
 }

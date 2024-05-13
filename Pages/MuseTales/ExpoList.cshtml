@@ -11,8 +11,22 @@
     @foreach(var item in Model.AllExpos)
     {
         <!-- Display button with Name as label -->
-        <a href="/MuseTales/MediaPLayer?id=@item.Id" class="btn btn-primary">@item.Name</a><br/>
+        //<a href="/MuseTales/MediaPLayer?id=@item.Id"><img class="img-fluid" src="~/Images/@item.PicturePath" width="50" height="auto" /></a>
+
+         <div class="media">
+            <a href="/MuseTales/MediaPLayer?id=@item.Id"><img class="img-fluid" src="~/Images/@item.PicturePath" width="100" height="auto" /></a>
+            <div class="media-body">
+                <h5 outline-style="auto" class="mt-0">@item.Name Id=@item.Id</h5>
+            </div>
+        </div>
     }
 </div>
+
+<table>
+    <td><a href="/MuseTales/CreateExpoTest" class="btn btn-primary btn-lg btn-block">Opret ny Expo</a></td>
+    <td><a href="/MuseTales/UpdateExpoTest" class="btn btn-primary btn-lg btn-block">Opdater en expo</a></td>
+    <td><a href="/MuseTales/DeleteExpoTest" class="btn btn-primary btn-lg btn-block">Slet en Expo</a></td>
+</table>
+
 
 

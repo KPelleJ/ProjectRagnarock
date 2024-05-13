@@ -6,10 +6,11 @@
         public string LogoImagePath { get; }
         public string BusinessDescription { get; }
         public List<Expo> Expos { get; }
-        
+
+        public void ExpoId();
         public List<Expo> GetAll();
-        public void CreateExpo(string name, string description, string soundPath, string imagePath);
-        public void UpdateExpo(int id);
+        public void CreateExpo(Expo expo);
+        public void UpdateExpo(Expo expo);
         public void RemoveExpo(int id);
 
     }

@@ -16,9 +16,13 @@ namespace ProjectRagnarock.Pages.MuseTales
             AllExpos = expoRepository.GetAll();
         }
 
+        public IExpoRepository ExpoRepository
+        {  get { return _expoRepository; } }
+
 
         public IActionResult OnGet()
         {
+            _expoRepository.ExpoId();
            return Page();
         }
 
