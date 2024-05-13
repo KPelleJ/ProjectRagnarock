@@ -6,6 +6,8 @@
 
 <h1>@ViewData["Title"]</h1>
 
+<div class="container"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">Opret ny expo</button></div>
+
 <table class="table">
     <thead>
         <tr>
@@ -25,11 +27,14 @@
                     @item.Name
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"> Delete </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal-@item.Id">Opdater</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@item.Id">Slet</button>
                 </td>
 
             </tr>
-            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+
+            
+            <div class="modal fade" id="deleteModal-@item.Id" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -41,13 +46,100 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-danger" >Delete</button>
-                            <button asp-page-handler="delete" formmethod="post" type="button" class="btn btn-danger" value="@item.Id">Delete</button>
+                            <form asp-page-handler="delete" method="post">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="modal fade" id="updateModal-@item.Id" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="updateModalLabel">Opdater expo</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form asp-page-handler="update" method="post">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Expo navn</label>
+                                        <input class="form-control" type="text" asp-for="Expo.Name" name="Name" />
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <label>Oplæsningen i tekstform</label>
+                                        <textarea class="form-control" asp-for="Expo.Description" name="Description" rows="6"></textarea>
+                                    </div>
+
+                                    <div class="row">
+                                        <label>Billede af udstillingen</label>
+                                        <input asp-for="Expo.PicturePath" type="file" class="" name="PicturePath">
+                                    </div>
+
+                                    <div class="row">
+                                        <label>Vælg lydfil til oplæsning</label>
+                                        <input asp-for="Expo.SoundFilePath" type="file" class="" name="SoundFilePath">
+                                    </div>
+                                </div>
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button class="form-control" type="submit">opdater</button>
+                            </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
         }
     </tbody>
 </table>
+
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="createModalLabel">Opret en ny expo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-page-handler="create" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <label>Expo navn</label>
+                            <input class="form-control" type="text" asp-for="Expo.Name" name="Name" />
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <label>Oplæsningen i tekstform</label>
+                            <textarea class="form-control" asp-for="Expo.Description" name="Description" rows="6"></textarea>
+                        </div>
+
+                        <div class="row">
+                            <label>Billede af udstillingen</label>
+                            <input asp-for="Expo.PicturePath" type="file" class="" name="PicturePath">
+                        </div>
+
+                        <div class="row">
+                            <label>Vælg lydfil til oplæsning</label>
+                            <input asp-for="Expo.SoundFilePath" type="file" class="" name="SoundFilePath">
+                        </div>
+                    </div>
+                    <button class="form-control" type="submit">opret</button>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 

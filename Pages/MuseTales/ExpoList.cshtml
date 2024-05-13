@@ -5,18 +5,15 @@
     ViewData["Title"] = "Liste over alle udstillinger";
 }
 <header>
-    <h1 align="center">Test for satan da Bobby</h1>
+    <h1 align="center">@ViewData["Title"]</h1>
 </header>
 <div align="center">
     @foreach(var item in Model.AllExpos)
     {
-        <!-- Display button with Name as label -->
-        //<a href="/MuseTales/MediaPLayer?id=@item.Id"><img class="img-fluid" src="~/Images/@item.PicturePath" width="50" height="auto" /></a>
-
-         <div class="media">
-            <a href="/MuseTales/MediaPLayer?id=@item.Id"><img class="img-fluid" src="~/Images/@item.PicturePath" width="100" height="auto" /></a>
-            <div class="media-body">
-                <h5 outline-style="auto" class="mt-0">@item.Name Id=@item.Id</h5>
+        <div class="card" style="width: 18rem;">
+            <a href="/MuseTales/MediaPLayer?id=@item.Id"><img class="img-fluid" src="~/Images/@item.PicturePath"/></a>
+            <div class="card-body">
+                <h5 outline-style="auto" class="mt-0">@item.Name</h5>
             </div>
         </div>
     }
@@ -24,9 +21,4 @@
 
 <table>
     <td><a href="/MuseTales/AdminDash" class="btn btn-primary btn-lg btn-block">Admin kontrolpanel</a></td>
-    <td><a href="/MuseTales/Test" class="btn btn-primary btn-lg btn-block">Test</a></td>
-
 </table>
-
-
-

@@ -26,9 +26,5 @@ namespace ProjectRagnarock.Pages.MuseTales
            return Page();
         }
 
-        public IActionResult OnPost()
-        {
-            return Page();
-        }
     }
 }

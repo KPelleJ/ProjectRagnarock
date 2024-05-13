@@ -17,25 +17,40 @@ namespace ProjectRagnarock.Pages.MuseTales
             Expo = new Expo(); ;
             AllExpos = _expoRepository.GetAll();
         }
+        
         public IActionResult OnGet()
         {
+            _expoRepository.ExpoId();
             return Page();
         }
 
         public IActionResult OnPostDelete(int id)
         {
             _expoRepository.RemoveExpo(id);
-            return RedirectToPage("/MuseTales/ExpoList");
+            return RedirectToPage("/MuseTales/AdminDash");
         }
 
         public IActionResult OnPostCreate()
         {
-            return RedirectToPage("/MuseTales/ExpoList");
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _expoRepository.CreateExpo(Expo);
+            return RedirectToPage("/MuseTales/AdminDash");
         }
 
         public IActionResult OnPostUpdate()
         {
-            return RedirectToPage("/MuseTales/ExpoList");
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _expoRepository.UpdateExpo(Expo);
+            return RedirectToPage("/MuseTales/AdminDash");
+            
         }
     }
 }
