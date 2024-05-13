@@ -35,6 +35,8 @@ namespace ProjectRagnarock.Pages.MuseTales
 
         public IActionResult OnPostDelete(int id)
         {
+            
+
             _expoRepository.RemoveExpo(id);
             return RedirectToPage("/MuseTales/ExpoList");
         }
