@@ -19,10 +19,14 @@ namespace ProjectRagnarock.Pages
         {
 
         }
-        public IActionResult OnGet()
-        {
-            return Page();
-        }
+        //public async Task<IActionResult> OnGet()
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        await Task.Delay(5000);
+        //    }
+        //    return RedirectToPage("/Index");
+        //}
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
