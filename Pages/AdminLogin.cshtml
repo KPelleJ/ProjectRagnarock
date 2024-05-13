@@ -8,11 +8,14 @@
     <div>
         <label for="_username">Username:</label>
         <input type="text" id="_username" name="_username" />
+        <span asp-validation-for="_username" class="text-danger"></span>
     </div>
     <div>
         <label for="_password">Password:</label>
         <input type="_password" id="_password" name="_password" />
         <span asp-validation-for="_password" class="text-danger"></span>
     </div>
+    <text> </text>
+    
     <button type="submit">Login</button>
 </form>

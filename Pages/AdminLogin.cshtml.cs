@@ -22,7 +22,7 @@ namespace ProjectRagnarock.Pages
         {
             if (Validation(_username, _password))
             {
-                return RedirectToPage("MuseTales/Expolist");
+                return RedirectToPage("MuseTales/AdminDash");
             }
             else
             {
@@ -38,7 +38,7 @@ namespace ProjectRagnarock.Pages
             }
             else
             {
-                ModelState.AddModelError("_password", "Invalid username or password");
+                ModelState.AddModelError("_password", "Forkert brugernavn eller adgangskode");
                 return false;
             }
         }
