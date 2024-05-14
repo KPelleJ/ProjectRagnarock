@@ -58,6 +58,6 @@ namespace ProjectRagnarock.Pages
         [DataType(DataType.Password)]
         [Display(Name = "Pincode")]
         public string PinCode { get; set; }
-
+        public string Name { get; set; }
     }
 }

@@ -9,6 +9,7 @@ namespace ProjectRagnarock.Models
         private string _description;
         private string _soundFilePath;
         private string _picturePath;
+        public int Id { get; set; }
 
         public Expo(string name, string description,string soundFilePath, string picturePath)
         {
@@ -47,6 +48,6 @@ namespace ProjectRagnarock.Models
             set { _picturePath = value; }
         }
 
-        public int Id { get; set; }
+        
     }
 }
