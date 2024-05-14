@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using ProjectRagnarock.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata.Ecma335;
 
@@ -10,6 +11,11 @@ namespace ProjectRagnarock.Pages
         [BindProperty]
         public Credential credential { get; set; }
 
+        [BindProperty]
+        public CodeCred codes { get; set; }
+
+        public CustomerLogin login { get; set; }
+
         List<Credential> credentials = new List<Credential>() {
             new Credential("1111"),
             new Credential("2222"),
@@ -18,7 +24,7 @@ namespace ProjectRagnarock.Pages
         };
         public IndexModel()
         {
-
+            login = new CustomerLogin();
         }
         public IActionResult OnGet()
         {
@@ -27,17 +33,17 @@ namespace ProjectRagnarock.Pages
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
+            
+            if (login.Validation(codes.pincode) == true)
             {
-                return Page();
+                return RedirectToPage("/MuseTales/ExpoList");
             }
-            foreach (Credential cred in credentials)
-            {
-                if (credential.PinCode == cred.PinCode)
-                {
-                    return RedirectToPage("/MuseTales/ExpoList");
-                }
-            }
+            
+            
             ModelState.AddModelError(string.Empty, "Forkert kode");
             return Page();
         }
