@@ -5,15 +5,16 @@
 <h1>Admin Login</h1>
 
 <form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
     <div>
-        <label for="_username">Username:</label>
-        <input type="text" id="_username" name="_username" />
-        <span asp-validation-for="_username" class="text-danger"></span>
+        <label for="Username">Username:</label>
+        <input asp-for="admin.Username" type="text" id="Username" name="Username" />
+        <span asp-validation-for="admin.Username" class="text-danger"></span>
     </div>
     <div>
-        <label for="_password">Password:</label>
-        <input type="_password" id="_password" name="_password" />
-        <span asp-validation-for="_password" class="text-danger"></span>
+        <label for="Password">Password:</label>
+        <input asp-for="admin.Password" type="Password" id="Password" name="Password" />
+        <span asp-validation-for="admin.Password" class="text-danger"></span>
     </div>
     <text> </text>
     

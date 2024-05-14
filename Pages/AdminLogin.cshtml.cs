@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using ProjectRagnarock.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProjectRagnarock.Pages
@@ -7,41 +8,35 @@ namespace ProjectRagnarock.Pages
     public class AdminLoginModel : PageModel
     {
         [BindProperty]
-        [Required(ErrorMessage = "Brugernavn er påkrævet")]
-        public string _username { get; set; }
-
-        [BindProperty]
-        [Required(ErrorMessage = "Adgangskode er påkrævet")]
-        public string _password { get; set; }
-
-        public void OnGet()
+        public AdminLogin admin {  get; set; }
+        public AdminLoginModel()
         {
+
+        }
+
+        public IActionResult OnGet()
+        {
+            return Page();
         }
 
         public IActionResult OnPost()
         {
-            if (Validation(_username, _password))
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError(string.Empty, "Mangler username og password");
+                return Page();
+            }
+            if (admin.Validation(admin.Username, admin.Password))
             {
                 return RedirectToPage("MuseTales/AdminDash");
             }
             else
             {
+                ModelState.AddModelError(string.Empty, "Ugyldigt username og password");
                 return Page();
             }
-        }
-
-        private bool Validation(string _username, string _password)
-        {
-            if (_username == "admin" && _password == "1234")
-            {
-                return true;
-            }
-            else
-            {
-                ModelState.AddModelError("_password", "Forkert brugernavn eller adgangskode");
-                return false;
             }
         }
     }
-}
+
 

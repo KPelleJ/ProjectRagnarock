@@ -33,8 +33,6 @@ namespace ProjectRagnarock.Pages
             {
                 return RedirectToPage("/MuseTales/ExpoList");
             }
-            
-            
             ModelState.AddModelError(string.Empty, "Forkert kode");
             return Page();
         }

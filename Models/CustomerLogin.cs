@@ -8,8 +8,6 @@
         {
             Codes = new List<String>() {new string ("1111"), new string("2222") };
         }
-
-
         public bool Validation(string pin) 
         { 
             foreach (var item in Codes) 
@@ -23,7 +21,7 @@
                     return false;
                 }
             }
-             return false;
+            return false;
         }
     }
 }

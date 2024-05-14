@@ -9,7 +9,5 @@ namespace ProjectRagnarock.Models
         [DataType(DataType.Password)]
         [Display(Name = "Pincode")]
         public string Pincode {  get; set; }
-
-
     }
 }
