@@ -1,8 +1,14 @@
-﻿namespace ProjectRagnarock.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjectRagnarock.Models
 {
     public class CodeCred
     {
-        public string pincode {  get; set; }
+        [Required]
+        [StringLength(4)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Pincode")]
+        public string Pincode {  get; set; }
 
 
     }
