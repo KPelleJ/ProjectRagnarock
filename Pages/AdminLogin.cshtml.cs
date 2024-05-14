@@ -23,7 +23,7 @@ namespace ProjectRagnarock.Pages
         {
             if (!ModelState.IsValid)
             {
-                ModelState.AddModelError(string.Empty, "Mangler username og password");
+                ModelState.AddModelError(string.Empty, "Mangler brugernavn og adgangskode");
                 return Page();
             }
             if (admin.Validation(admin.Username, admin.Password))
@@ -32,7 +32,7 @@ namespace ProjectRagnarock.Pages
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Ugyldigt username og password");
+                ModelState.AddModelError(string.Empty, "Ugyldigt brugernavn og adgangskode");
                 return Page();
             }
             }
