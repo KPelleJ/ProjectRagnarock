@@ -24,9 +24,9 @@ namespace ProjectRagnarock.Pages.MuseTales
             return Page();
         }
 
-        public IActionResult OnPostDelete(int id)
+        public IActionResult OnPostDelete()
         {
-            _expoRepository.RemoveExpo(id);
+            _expoRepository.RemoveExpo(Expo.Id);
             return RedirectToPage("/MuseTales/AdminDash");
         }
 

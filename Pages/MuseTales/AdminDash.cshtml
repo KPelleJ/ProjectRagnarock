@@ -67,23 +67,23 @@
                                 <div class="row">
                                     <div class="col">
                                         <label>Expo navn</label>
-                                        <input class="form-control" type="text" asp-for="Expo.Name" name="Name" />
+                                        <input class="form-control" type="text" asp-for="Expo.Name" required name="Name" value="@item.Name"/>
                                     </div>
                                 </div>
                                 <div class="row align-items-center">
                                     <div class="col">
                                         <label>Oplæsningen i tekstform</label>
-                                        <textarea class="form-control" asp-for="Expo.Description" name="Description" rows="6"></textarea>
+                                        <textarea class="form-control" asp-for="@item.Description" required name="Description" rows="6"></textarea>
                                     </div>
 
                                     <div class="row">
                                         <label>Billede af udstillingen</label>
-                                        <input asp-for="Expo.PicturePath" type="file" class="" name="PicturePath">
+                                        <input asp-for="Expo.PicturePath" type="file" class="" required name="PicturePath" value="@item.PicturePath">
                                     </div>
 
                                     <div class="row">
                                         <label>Vælg lydfil til oplæsning</label>
-                                        <input asp-for="Expo.SoundFilePath" type="file" class="" name="SoundFilePath">
+                                        <input asp-for="Expo.SoundFilePath" type="file" class="" required name="SoundFilePath" value="@item.SoundFilePath">
                                     </div>
                                 </div>
                                 <input type="hidden" name="id" value="@item.Id" />

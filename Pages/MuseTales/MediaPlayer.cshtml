@@ -6,23 +6,35 @@
 }
 
 
-<header>
-    <h1 align="center"></h1>
-</header>
-<div align="center">
- 
-</div>
+
+
+
+
 @foreach (var item in Model.AllExpos)
 {
     if (item.Id == Model.ExpoId)
     {
+        <div>
         <header>
-            <h1 align="center">@item.Name</h1>
+            <a class="btn btn-outline-info" asp-area="" asp-page="/MuseTales/ExpoList">&#8592; Tilbage</a>
         </header>
+        <br />
+        </div>
+
         <div align="center">
             <img src="~/Images/@item.PicturePath" class="img-fluid" alt="@item.Name" width="240px" height="350px">
-            
         </div>
+
+        <div class="container" align="center">
+            <div class="btn-group btn-group-lg" role="group" aria-label="Forrige og næste knapper">
+                <button type="button" class="btn btn-outline-primary">Forrige</button>
+                <button type="button" class="btn btn-outline-primary">Næste</button>
+            </div>
+        </div>
+
+
+
+
         <div align="center">
             <audio controls id="myAudio">
                 <source src="~/Sound/@item.SoundFilePath" type="audio/mp3" />
@@ -31,7 +43,7 @@
         </div>
        
         <footer align="center">
-            <div class="accordion" id="accordionExample">
+            <div class="accordion accordion-flush" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

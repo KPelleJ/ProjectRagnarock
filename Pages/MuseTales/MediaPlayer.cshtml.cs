@@ -24,5 +24,10 @@ namespace ProjectRagnarock.Pages.MuseTales
             _expoId = id;
             //return Page();
         }
+
+        public IActionResult OnPostReturn() 
+        {
+            return RedirectToPage("/MuseTales/ExpoList");
+        }
     }
 }
