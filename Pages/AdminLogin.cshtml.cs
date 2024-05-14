@@ -7,11 +7,11 @@ namespace ProjectRagnarock.Pages
     public class AdminLoginModel : PageModel
     {
         [BindProperty]
-        [Required(ErrorMessage = "Username is required")]
+        [Required(ErrorMessage = "Brugernavn er påkrævet")]
         public string _username { get; set; }
 
         [BindProperty]
-        [Required(ErrorMessage = "Password is required")]
+        [Required(ErrorMessage = "Adgangskode er påkrævet")]
         public string _password { get; set; }
 
         public void OnGet()
