@@ -2,12 +2,12 @@
 
 namespace ProjectRagnarock.Models
 {
-    public class Customer:User
+    public class Customer
     {
         [Required]
         [StringLength(4)]
         [DataType(DataType.Password)]
         [Display(Name = "Pincode")]
-        public string PinCode { get; set; }
+        public string Pincode { get; set; }
     }
 }

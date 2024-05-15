@@ -1,6 +1,6 @@
 ﻿namespace ProjectRagnarock.Models
 {
-    public class Admin:User
+    public class Admin
     {
     }
 }

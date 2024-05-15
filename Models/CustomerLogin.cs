@@ -2,26 +2,25 @@
 {
     public class CustomerLogin
     {
-        public List<String> Codes;
+        public ICodeRepository CodeRepo;
+        private List<string> Codes;
 
-        public CustomerLogin() 
+        public CustomerLogin(ICodeRepository codeRepo) 
         {
-            Codes = new List<String>() {new string ("1111"), new string("2222") };
+            CodeRepo = codeRepo;
+            Codes = codeRepo.GetAll();
+            
         }
         public bool Validation(string pin) 
         { 
-            //foreach (var item in Codes) 
-            //{
-            //    if (item == pin)
-            //    { 
-            //        return true;
-            //    }
-            //    else 
-            //    {
-            //        return false;
-            //    }
-            //}
-            return true;
+            foreach (var item in Codes) 
+            {
+                if (item == pin)
+                { 
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

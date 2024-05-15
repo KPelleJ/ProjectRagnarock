@@ -19,10 +19,17 @@ namespace ProjectRagnarock.Pages.MuseTales
 
         public int ExpoId
         {  get { return _expoId; } }
-        public void OnGet(int id)
+        public IActionResult OnGet(int id)
         {
-            _expoId = id;
-            //return Page();
+            if (HttpContext.Session.GetString("User") != null)
+            {
+                _expoId = id;
+                return Page();
+            }
+            else
+            {
+                return RedirectToPage("/Index");
+            }
         }
 
         public IActionResult OnPostReturn() 

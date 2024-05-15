@@ -4,12 +4,6 @@
 @{
     ViewData["Title"] = "Liste over alle udstillinger";
 }
-@if(HttpContext.Session.GetString("User")!=null)
-{
-    @HttpContext.Session.GetString("User")
-
-}
-
 <header>
     <h1 align="center">@ViewData["Title"]</h1>
 </header>

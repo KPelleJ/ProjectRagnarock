@@ -9,13 +9,14 @@ namespace ProjectRagnarock.Pages
     public class IndexModel : PageModel
     {
         [BindProperty]
-        public CodeCred codes { get; set; }
+        public Customer customers { get; set; }
 
-        public CustomerLogin login { get; set; }
+        
+        public CustomerLogin login { get; }
 
-        public IndexModel()
+        public IndexModel(ICodeRepository codeRepo)
         {
-            login = new CustomerLogin();
+            login = new CustomerLogin(codeRepo);
         }
         public IActionResult OnGet()
         {
@@ -29,11 +30,11 @@ namespace ProjectRagnarock.Pages
                 return Page();
             }
             
-            if (login.Validation(codes.Pincode) == true)
+            if (login.Validation(customers.Pincode) == true)
             {
                 Customer c = new Customer();
-                c.Username = codes.Pincode;
-                HttpContext.Session.SetString("User",c.Username);
+                c.Pincode = customers.Pincode;
+                HttpContext.Session.SetString("User",c.Pincode);
                 return RedirectToPage("/MuseTales/ExpoList");
             }
             ModelState.AddModelError(string.Empty, "Forkert kode");
