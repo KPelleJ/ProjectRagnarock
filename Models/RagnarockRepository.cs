@@ -13,7 +13,7 @@ namespace ProjectRagnarock.Models
         public RagnarockRepository() 
         {
             _expos = new List<Expo>();
-            _expos.Add(new Expo("60'ernes syrede Rock", "Take me oooooooooooooooooooooooooooonnnnnnnnnnnnnnnnn, take on me.", "Voicy_gnome sound.mp3", "PsykRock.png"));
+            _expos.Add(new Expo("60'ernes syrede Rock", "Take me on, take on me.", "Voicy_gnome sound.mp3", "PsykRock.png"));
             _expos.Add(new Expo("Metal igennem tiderne", "Der var engang en svensk mand ved navn Lars, der elskede at eksperimentere i køkkenet. " +
                 "Han prøvede alt fra traditionelle svenske retter til mere eksotiske opskrifter fra fjerne lande. Men der var én ting, han aldrig kunne mestre - at lave medisterpølse." +
                 "\r\n\r\nLars havde hørt så meget om den danske delikatesse, medisterpølse, og besluttede sig for at prøve at lave det selv. " +
