@@ -31,6 +31,9 @@ namespace ProjectRagnarock.Pages
             
             if (login.Validation(codes.Pincode) == true)
             {
+                Customer c = new Customer();
+                c.Username = codes.Pincode;
+                HttpContext.Session.SetString("User",c.Username);
                 return RedirectToPage("/MuseTales/ExpoList");
             }
             ModelState.AddModelError(string.Empty, "Forkert kode");

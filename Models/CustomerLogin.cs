@@ -10,18 +10,18 @@
         }
         public bool Validation(string pin) 
         { 
-            foreach (var item in Codes) 
-            {
-                if (item == pin)
-                { 
-                    return true;
-                }
-                else 
-                {
-                    return false;
-                }
-            }
-            return false;
+            //foreach (var item in Codes) 
+            //{
+            //    if (item == pin)
+            //    { 
+            //        return true;
+            //    }
+            //    else 
+            //    {
+            //        return false;
+            //    }
+            //}
+            return true;
         }
     }
 }

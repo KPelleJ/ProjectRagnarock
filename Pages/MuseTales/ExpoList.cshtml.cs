@@ -22,8 +22,15 @@ namespace ProjectRagnarock.Pages.MuseTales
 
         public IActionResult OnGet()
         {
-            _expoRepository.ExpoId();
-           return Page();
+            if (HttpContext.Session.GetString("User") != null)
+            {
+                _expoRepository.ExpoId();
+                return Page();
+            }
+            else
+            {
+                return RedirectToPage("/Index");
+            }
         }
 
     }
