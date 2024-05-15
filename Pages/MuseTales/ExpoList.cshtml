@@ -1,12 +1,18 @@
 ﻿@page
 @using ProjectRagnarock.Models
 @model ProjectRagnarock.Pages.MuseTales.ExpoListModel
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Liste over alle udstillinger";
 }
 <header>
     <h1 align="center">@ViewData["Title"]</h1>
+    <form method="post" style="position: absolute; top: 0; right: 0;">
+        <name="qrcode" asp-for="@Model.QRCodeImage" />
+        <input type="submit" value="Scan QR Kode" asp-page-handler="Scan QR Kode" />
+    </form>
 </header>
+
 <div align="center">
     @foreach(var item in Model.AllExpos)
     {
@@ -23,3 +29,5 @@
 <table>
     <td><a href="/MuseTales/AdminDash" class="btn btn-primary btn-lg btn-block">Admin kontrolpanel</a></td>
 </table>
+
+

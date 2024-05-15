@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProjectRagnarock.Models;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection.Emit;
 
 namespace ProjectRagnarock.Pages
 {
@@ -28,6 +29,8 @@ namespace ProjectRagnarock.Pages
             }
             if (admin.Validation(admin.Username, admin.Password))
             {
+                Admin a = new Admin();
+                HttpContext.Session.SetString("User", a.Username + a.Password);
                 return RedirectToPage("MuseTales/AdminDash");
             }
             else

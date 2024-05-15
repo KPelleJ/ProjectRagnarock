@@ -16,7 +16,7 @@ namespace ProjectRagnarock.Models
         public string Password { get; set; }
         public bool Validation(string username, string password)
         {
-            if (username == "admin" && password == "1234")
+           if (username == "admin" && password == "1234")
             {
                 return true;
             }

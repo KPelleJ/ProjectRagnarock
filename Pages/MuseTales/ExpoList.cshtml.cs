@@ -1,6 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProjectRagnarock.Models;
+using QRCoder;
+using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Security.Cryptography.X509Certificates;
 
 
 namespace ProjectRagnarock.Pages.MuseTales
@@ -17,8 +22,9 @@ namespace ProjectRagnarock.Pages.MuseTales
         }
 
         public IExpoRepository ExpoRepository
-        {  get { return _expoRepository; } }
+        { get { return _expoRepository; } }
 
+        public string QRCodeImage { get; private set; }
 
         public IActionResult OnGet()
         {
@@ -32,6 +38,9 @@ namespace ProjectRagnarock.Pages.MuseTales
                 return RedirectToPage("/Index");
             }
         }
-
+       
     }
 }
+        
+  
+
