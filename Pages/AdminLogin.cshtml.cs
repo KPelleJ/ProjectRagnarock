@@ -30,7 +30,7 @@ namespace ProjectRagnarock.Pages
             if (admin.Validation(admin.Username, admin.Password))
             {
                 Admin a = new Admin();
-                HttpContext.Session.SetString("User", a.Username + a.Password);
+                HttpContext.Session.SetString("Admin", a.Username + a.Password);
                 return RedirectToPage("MuseTales/AdminDash");
             }
             else
