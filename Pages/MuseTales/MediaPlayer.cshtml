@@ -27,8 +27,20 @@
 
         <div class="container" align="center">
             <div class="btn-group btn-group-lg" role="group" aria-label="Forrige og næste knapper">
-                <button type="button" class="btn btn-outline-primary">Forrige</button>
-                <button type="button" class="btn btn-outline-primary">Næste</button>
+                @if (item.Id > 1)
+                {
+                    <form asp-page-handler="previous" method="post">
+                        <input type="hidden" name="id" value="@item.Id" />
+                    <button type="submit" class="btn btn-outline-primary">Forrige</button>
+                </form>
+                }
+                @if (item.Id < Model.AllExpos.Count)
+                {
+                    <form asp-page-handler="next" method="post">
+                        <input type="hidden" name="id" value="@item.Id" />
+                    <button type="submit" class="btn btn-outline-primary">Næste</button>
+                </form>
+                }
             </div>
         </div>
 
@@ -43,7 +55,7 @@
         </div>
        
         <footer align="center">
-            <div class="accordion accordion-flush" id="accordionExample">
+            <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

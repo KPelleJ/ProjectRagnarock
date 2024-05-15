@@ -22,7 +22,7 @@ namespace ProjectRagnarock.Pages.MuseTales
 
         public IActionResult OnGet()
         {
-            if (HttpContext.Session.GetString("User") != null)
+            if(HttpContext.Session.GetString("User") != null || HttpContext.Session.GetString("Admin") != null)
             {
                 _expoRepository.ExpoId();
                 return Page();

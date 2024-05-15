@@ -21,7 +21,7 @@ namespace ProjectRagnarock.Pages.MuseTales
         {  get { return _expoId; } }
         public IActionResult OnGet(int id)
         {
-            if (HttpContext.Session.GetString("User") != null)
+            if (HttpContext.Session.GetString("User") != null || HttpContext.Session.GetString("Admin") != null)
             {
                 _expoId = id;
                 return Page();
@@ -35,6 +35,16 @@ namespace ProjectRagnarock.Pages.MuseTales
         public IActionResult OnPostReturn() 
         {
             return RedirectToPage("/MuseTales/ExpoList");
+        }
+
+        public void OnPostPrevious(int id) 
+        {
+            _expoId = id - 1;
+        }
+
+        public void OnPostNext(int id) 
+        {
+            _expoId = id + 1;
         }
     }
 }
