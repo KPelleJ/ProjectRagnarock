@@ -7,13 +7,17 @@
 }
 <header>
     <h1 align="center">@ViewData["Title"]</h1>
-    <form method="post" style="position: absolute; top: 0; right: 0;">
-        <name="qrcode" asp-for="@Model.QRCodeImage" />
-        <input type="submit" value="Scan QR Kode" asp-page-handler="Scan QR Kode" />
-    </form>
+    
 </header>
+<div>
+<form method="post" style="position: absolute; right: 0;">
+    <name ="qrcode" asp-for="@Model.QRCodeImage" />
+    <input type="submit" value="Scan QR Kode" asp-page-handler="Scan QR Kode" />
+</form>
+</div>
 
 <div align="center">
+   
     @foreach(var item in Model.AllExpos)
     {
         <div class="card" style="width: 18rem;">
