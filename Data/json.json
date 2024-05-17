@@ -7,7 +7,14 @@
     "PicturePath": "135556_Ragnarock dag.jpg"
   },
   {
-    "Id": 0,
+    "Id": 1,
+    "Name": "GnomePorn",
+    "Description": "Porno gnome",
+    "SoundFilePath": "Voicy_gnome sound.mp3",
+    "PicturePath": "Disco.jpg"
+  },
+  {
+    "Id": 2,
     "Name": "GnomePorn",
     "Description": "Porno gnome",
     "SoundFilePath": "Voicy_gnome sound.mp3",
