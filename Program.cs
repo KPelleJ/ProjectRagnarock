@@ -10,8 +10,8 @@ namespace ProjectRagnarock
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            builder.Services.AddSingleton<IExpoRepository,RagnarockRepository>();
-            //builder.Services.AddTransient<RagnarockJsonRepository>();
+            builder.Services.AddSingleton<IExpoRepository,RagnarockJsonRepository>();
+            builder.Services.AddTransient<RagnarockJsonRepository>();
             builder.Services.AddSingleton<ICodeRepository, CodeRepository>();
             builder.Services.AddDistributedMemoryCache();
 

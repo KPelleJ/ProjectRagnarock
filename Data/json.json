@@ -1,9 +1,16 @@
 [
   {
     "Id": 0,
-    "Name": "FJFJFJFJFJFJFJ",
-    "Description": "dertfyguhbjnikml,æ.",
-    "SoundFilePath": "SoundTest1.wav",
-    "PicturePath": "Dannebrog.png"
+    "Name": "Naked Cockpit",
+    "Description": "Naked man in cockpit",
+    "SoundFilePath": "naked.wav",
+    "PicturePath": "135556_Ragnarock dag.jpg"
+  },
+  {
+    "Id": 0,
+    "Name": "GnomePorn",
+    "Description": "Porno gnome",
+    "SoundFilePath": "Voicy_gnome sound.mp3",
+    "PicturePath": "Disco.jpg"
   }
 ]
