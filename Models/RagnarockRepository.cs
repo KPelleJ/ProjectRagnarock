@@ -3,6 +3,7 @@ using System.Diagnostics.Metrics;
 
 namespace ProjectRagnarock.Models
 {
+    
     public class RagnarockRepository:IExpoRepository
     {
         private string _businessName;

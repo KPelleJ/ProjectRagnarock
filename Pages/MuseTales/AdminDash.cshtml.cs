@@ -23,7 +23,7 @@ namespace ProjectRagnarock.Pages.MuseTales
         public AdminDashModel(IExpoRepository expoRepository)
         {
             _expoRepository = expoRepository;
-            Expo = new Expo(); ;
+            Expo = new Expo();
             AllExpos = _expoRepository.GetAll();
         }
         
