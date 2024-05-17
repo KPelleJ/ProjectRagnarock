@@ -133,6 +133,14 @@
                             <input asp-for="Expo.SoundFilePath" class="form-control form-control-sm" type="file" name="SoundFilePath">
                         </div>
                     </div>
+                    @{
+                        int count = 1;
+                        foreach (var item in Model.AllExpos)
+                        {
+                            count++;
+                        }
+                    }
+                    <input type="hidden" name="id" value="@count" />
                     <button class="form-control" type="submit">opret</button>
                 </form>
                 <div class="modal-footer">
