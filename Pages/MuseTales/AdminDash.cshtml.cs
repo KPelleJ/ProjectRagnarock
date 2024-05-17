@@ -15,10 +15,6 @@ namespace ProjectRagnarock.Pages.MuseTales
         private IExpoRepository _expoRepository { get; set; }
         public List<Expo> AllExpos;
         private IWebHostEnvironment Environment;
-
-
-
-
         public AdminDashModel(IExpoRepository expoRepository, IWebHostEnvironment environment)
         {
             _expoRepository = expoRepository;
@@ -38,8 +34,6 @@ namespace ProjectRagnarock.Pages.MuseTales
             {
                 return RedirectToPage("/AdminLogin");
             }
-
-
         }
 
         public void UploadPic(List<IFormFile> PicturePath)

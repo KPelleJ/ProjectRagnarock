@@ -4,7 +4,7 @@ using System.Diagnostics.Metrics;
 namespace ProjectRagnarock.Models
 {
     
-    public class RagnarockRepository:IExpoRepository
+    public class RagnarockRepository
     {
         private string _businessName;
         private string _logoImagePath;

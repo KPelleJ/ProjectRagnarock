@@ -31,13 +31,12 @@ namespace ProjectRagnarock.Models
 
         public void ExpoId()
         {
-            int counter = 0;
+            int counter = 1;
             foreach (Expo expo in _expos)
             {
                 expo.Id = counter;
                 counter++;
             }
-            JsonReader.ReadJson(JsonFilePath);
         }
 
         public List<Expo> GetAll()
@@ -52,18 +51,16 @@ namespace ProjectRagnarock.Models
                 if (expo.Id == id)
                 {
                     _expos.Remove(expo);
-                    return;
+                    break;
                 }
             }
             JsonWriter.WriteToJson(_expos, JsonFilePath);
         }
-
+         
         public void UpdateExpo(Expo expo)
         {
-            Debug.WriteLine(expo.Id);
             foreach (Expo ex in _expos)
             {
-                Debug.WriteLine(ex.Id + " " + expo.Id);
                 if (ex.Id == expo.Id)
                 {
                     Debug.WriteLine("found");
