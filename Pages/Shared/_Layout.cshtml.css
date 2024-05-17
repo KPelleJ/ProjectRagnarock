@@ -39,10 +39,15 @@ button.accept-policy {
   line-height: inherit;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+footer {
+    background-color: black;
+    color: white;
+    /top, right, bottom, left/ padding: 35px 80px 35px 15px;
 }
+
+.footer-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 25px;
+}
+

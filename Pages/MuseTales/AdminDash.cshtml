@@ -1,4 +1,5 @@
 ﻿@page
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
 @model ProjectRagnarock.Pages.MuseTales.AdminDashModel
 @{
     ViewData["Title"] = "Admin";
@@ -27,13 +28,14 @@
                     @item.Name
                 </td>
                 <td>
+                    @item.PicturePath og @item.SoundFilePath
+                </td>
+                <td>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal-@item.Id">Opdater</button>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@item.Id">Slet</button>
                 </td>
-
             </tr>
 
-            
             <div class="modal fade" id="deleteModal-@item.Id" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -42,7 +44,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                         Er du sikker på du vil slette denne expo?
+                            Er du sikker på du vil slette denne expo?
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -63,11 +65,11 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form asp-page-handler="Update" method="post">
+                            <form asp-page-handler="update" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col">
                                         <label>Expo navn</label>
-                                        <input class="form-control" type="text" asp-for="Expo.Name" required name="Name" value="@item.Name"/>
+                                        <input class="form-control" type="text" asp-for="Expo.Name" required name="Name" value="@item.Name" />
                                     </div>
                                 </div>
                                 <div class="row align-items-center">
@@ -77,13 +79,13 @@
                                     </div>
 
                                     <div class="row">
-                                        <label>Billede af udstillingen</label>
-                                        <input asp-for="Expo.PicturePath" type="file" class="" required name="PicturePath">
+                                        <label>Upload billede til udstillingen</label>
+                                        <input asp-for="Expo.PicturePath" type="file" required name="PicturePath">
                                     </div>
 
                                     <div class="row">
-                                        <label>Vælg lydfil til oplæsning</label>
-                                        <input asp-for="Expo.SoundFilePath" type="file" class="" required name="SoundFilePath">
+                                        <label>Upload lydfil til oplæsning</label>
+                                        <input asp-for="Expo.SoundFilePath" type="file" required name="SoundFilePath">
                                     </div>
                                 </div>
                                 <input type="hidden" name="id" value="@item.Id" />
@@ -96,8 +98,6 @@
                     </div>
                 </div>
             </div>
-
-            
         }
     </tbody>
 </table>
@@ -110,7 +110,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form asp-page-handler="create" method="post">
+                <form asp-page-handler="create" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col">
                             <label>Expo navn</label>
@@ -124,16 +124,15 @@
                         </div>
 
                         <div class="row">
-                            <label>Billede af udstillingen</label>
-                            <input asp-for="Expo.PicturePath" type="file" class="" name="PicturePath">
+                            <label>Upload billede til udstillingen</label>
+                            <input asp-for="Expo.PicturePath" type="file" name="PicturePath">
                         </div>
 
                         <div class="row">
-                            <label>Vælg lydfil til oplæsning</label>
-                            <input asp-for="Expo.SoundFilePath" type="file" class="" name="SoundFilePath">
+                            <label>Upload lydfil til oplæsning</label>
+                            <input asp-for="Expo.SoundFilePath" type="file" name="SoundFilePath">
                         </div>
                     </div>
-
                     <button class="form-control" type="submit">opret</button>
                 </form>
                 <div class="modal-footer">
