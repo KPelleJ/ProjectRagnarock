@@ -4,7 +4,7 @@ namespace ProjectRagnarock.Models
 {
     public class RagnarockJsonRepository : IExpoRepository
     {
-        string JsonFilePath = @"C:\Users\nqvis\OneDrive\Skrivebord\proragnar\Data\json.json";
+        string JsonFilePath = @"C:\Project Ragnarock\Data\json.json";
         private string _businessName;
         private string _logoImagePath;
         private string _businessDescription;

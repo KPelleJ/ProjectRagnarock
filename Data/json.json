@@ -1,16 +1,16 @@
 [
   {
     "Id": 1,
-    "Name": "112345678op",
-    "Description": "123456790\r\n",
-    "SoundFilePath": "naked.wav",
-    "PicturePath": "wallhaven-120524.jpg"
+    "Name": "John Dillermand",
+    "Description": "Halløj",
+    "SoundFilePath": "Voicy_Chinese food.mp3",
+    "PicturePath": "Dannebrog.png"
   },
   {
     "Id": 2,
-    "Name": "Bro",
-    "Description": "bro",
-    "SoundFilePath": "wallhaven-120524.jpg",
-    "PicturePath": "wallhaven-120524.jpg"
+    "Name": "Disco 1234",
+    "Description": "Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn .",
+    "SoundFilePath": "naked.wav",
+    "PicturePath": "Disco.jpg"
   }
 ]
