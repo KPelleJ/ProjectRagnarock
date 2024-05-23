@@ -9,7 +9,7 @@
 
 
 
-
+<body>
 @foreach (var item in Model.AllExpos)
 {
     if (item.Id == Model.ExpoId)
@@ -22,7 +22,7 @@
         </div>
 
         <div align="center">
-            <img src="~/Images/@item.PicturePath" class="img-fluid" alt="@item.Name" width="240px" height="350px">
+            <img src="~/Images/@item.PicturePath" class="img-fluid" alt="@item.Name" width="75%" height="auto">
         </div>
 
         <div class="container" align="center">
@@ -48,13 +48,13 @@
 
 
         <div align="center">
-            <audio controls id="myAudio">
+                <audio controls class="w-100" id="myAudio">
                 <source src="~/Sound/@item.SoundFilePath" type="audio/mp3" />
                 <source src="~/Sound/@item.SoundFilePath" type="audio/vnd.wave" />
             </audio>
         </div>
        
-        <footer align="center">
+        <div align="center">
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -69,10 +69,11 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     }
 
 }
+</body>
 
 
 

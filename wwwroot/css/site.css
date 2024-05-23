@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    margin-bottom: 100px;
+    margin-bottom: 145px;
 }
 
 .accordion-button{
@@ -30,7 +30,7 @@ body {
 }
 
 .accordion-item {
-    width: 75%;
+    width: 100%;
     margin: auto;
 }
 
