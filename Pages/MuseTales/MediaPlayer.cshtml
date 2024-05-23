@@ -16,13 +16,13 @@
     {
         <div>
         <header>
-            <a class="btn btn-outline-info" asp-area="" asp-page="/MuseTales/ExpoList">&#8592; Tilbage</a>
+                    <a class="btn btn-outline-info" style="color:black; border-color: #B28228; background-color: #B28228;" asp-area="" asp-page="/MuseTales/ExpoList">&#8592; Tilbage</a>
         </header>
         <br />
         </div>
 
         <div align="center">
-            <img src="~/Images/@item.PicturePath" class="img-fluid" alt="@item.Name" width="75%" height="auto">
+                <img src="~/Images/@item.PicturePath" class="card-img-bottom" alt="@item.Name">
         </div>
 
         <div class="container" align="center">
@@ -31,24 +31,21 @@
                 {
                     <form asp-page-handler="previous" method="post">
                         <input type="hidden" name="id" value="@item.Id" />
-                    <button type="submit" class="btn btn-outline-primary">Forrige</button>
+                            <button type="submit" style="margin:10px; color:black; border-color: #B28228; background-color: #B28228;" class="btn btn-outline-primary">Forrige</button>
                 </form>
                 }
                 @if (item.Id < Model.AllExpos.Count)
                 {
                     <form asp-page-handler="next" method="post">
                         <input type="hidden" name="id" value="@item.Id" />
-                    <button type="submit" class="btn btn-outline-primary">Næste</button>
+                            <button type="submit" style="margin:10px; color:black; border-color: #B28228; background-color: #B28228" class="btn btn-outline-primary">Næste</button>
                 </form>
                 }
             </div>
         </div>
 
-
-
-
         <div align="center">
-                <audio controls class="w-100" id="myAudio">
+                <audio style="margin-bottom:10px; border-color: Black;" controls class="w-100" id="myAudio">
                 <source src="~/Sound/@item.SoundFilePath" type="audio/mp3" />
                 <source src="~/Sound/@item.SoundFilePath" type="audio/vnd.wave" />
             </audio>
@@ -58,7 +55,7 @@
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button" style="background-color: #B28228; color: black;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             @item.Name
                         </button>
                     </h2>

@@ -37,12 +37,15 @@ body {
     height: 200px; 
     object-fit: cover; 
 }
-
-
-
-
-
-
-
-
-
+.card-img-bottom{
+    height: 500px;
+}
+.accordion-button::after{
+    filter: invert(1);
+}
+#myAudio{
+    background-color:black;
+}
+#myAudio{
+    filter: invert(1);
+}
