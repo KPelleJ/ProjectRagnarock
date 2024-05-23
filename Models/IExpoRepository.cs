@@ -2,6 +2,7 @@
 {
     public interface IExpoRepository
     {
+        //Interfacet der bliver brugt til RagnarockJsonRepository.cs
         public string BusinessName { get; }
         public string LogoImagePath { get; }
         public string BusinessDescription { get; }

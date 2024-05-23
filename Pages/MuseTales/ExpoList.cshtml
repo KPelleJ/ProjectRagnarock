@@ -6,24 +6,23 @@
     ViewData["Title"] = "Liste over alle udstillinger";
 }
 <header>
-    <h1 align="center">@ViewData["Title"]</h1>
-    
+    <h1 align="center" style="font-family: 'Times New Roman'">@ViewData["Title"]</h1>
 </header>
-<div>
 
-
-<div align="center">
-   
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-md-3">
     @foreach(var item in Model.AllExpos)
     {
-        <div class="card" style="width: 18rem;">
-            <a href="/MuseTales/MediaPLayer?id=@item.Id"><img class="img-fluid" src="~/Images/@item.PicturePath"/></a>
+        <div class="col mb-4" >
+        <div class="card h-100 w-100">
+                    <a href="/MuseTales/MediaPLayer?id=@item.Id"><img class="card-img-top" src="~/Images/@item.PicturePath" /></a>
             <div class="card-body">
                 <h5 outline-style="auto" class="mt-0">@item.Name</h5>
             </div>
         </div>
-        <br />
+        </div>
     }
+    </div>
 </div>
 
 <div style="position: relative;">
