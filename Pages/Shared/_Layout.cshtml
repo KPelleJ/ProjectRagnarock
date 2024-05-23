@@ -7,12 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjectRagnarock.styles.css" asp-append-version="true" />
-    <style>
-        html, body, footer, header, nav, main, section {
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+       
 </head>
 <body>
     <header>
@@ -43,56 +38,21 @@
         </main>
     </div>
 
- <footer>
-    <section>
-    <div class="footer-grid-container">
-        <div>
-            <p class="boldNStrong">ADRESSE</p>
-            <p>RAGNAROCK</p>
-            <p>Museet for pop, rock og ungdomskultur</p>
-            <p>Rabalderstræde 16, Musicon </p>
-            <p>4000 Roskilde</p>
-            <p>CVR. NR: 15570210</p>
-        </div>
-        <div>
-            <p class="boldNStrong">KONTAKT OS</p>
-            <p>Administration:</p>
-            <p>+45 4631 6854</p>
-            <p>ragnarock@romu.dk</p>
-            <p>Man-fre: 09:00-15:00</p>
-                    <p><a href="https://romu.dk/medarbejdere/">Find medarbejdere her</a></p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="https://museumragnarock.dk/" class="dropdown-btn">OM OS</a>
+                <a href="https://museumragnarock.dk/" class="dropdown-btn">KONTAKT OS</a>
             </div>
-        <div>
-            <p class="boldNStrong">ÅBNINGSTIDER</p>
-            <p class="bold">2/1/2024 – 30/6/2024:</p>
-            <p>Tirsdag – søndag, samt helligdage: 10.00-17.00</p>
-            <p>Onsdag: 10.00-20.00</p>
-            <p>Tillige mandage i uge 7, 8 og 13</p>
-            <p class="bold">1/7/2024 – 11/8/2024</p>
-            <p>Mandag – søndag, samt helligdage: 10.00-17.00</p>
-            <p>Onsdag: 10.00-20.00</p>
-            <p class="bold">12/8/2024 – 22/12/2024</p>
-            <p>Tirsdag – søndag, samt helligdage: 10.00-17.00</p>
-            <p>Onsdag: 10.00-20.00 </p>
-            <p>Tillige mandag i uge 42</p>
+            <div class="footer-column footer-right">
+                <p>Musetails Interactive</p>
             </div>
-        <div
-            ><p class="boldNStrong">ENTRE</p>
-            <p>Voksne: 120 kr.</p>
-            <p>Grupperabat(min/15 pers.): 105 kr. pr. pers.</p>
-            <p>0-17 år : Gratis</p>
-            <p>Studierabat (studiekort forevises): 105 kr. pr. person</p>
-            <p>Fri entré til foyer, café, patio og butik.</p>
         </div>
-    </div>
-    </section>
-</footer> 
+    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
-     
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
