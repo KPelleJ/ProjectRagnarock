@@ -2,7 +2,9 @@
 @model ProjectRagnarock.Pages.AdminLoginModel
 @{
 }
-<h1>Admin Login</h1>
+
+<h1 style="font-family: 'Times New Roman';">Admin Login</h1>
+
 
 <style>
     .form-group {
@@ -23,12 +25,12 @@
 <form method="post">
     <div asp-validation-summary="ModelOnly"></div>
     <div>
-        <div class="form-group">
+        <div class="form-group" style="font-family: 'Times New Roman'">
             <label for="Username">Username:</label>
             <input asp-for="admin.Username" type="text" id="Username" name="Username" />
             <span asp-validation-for="admin.Username" class="text-danger"></span>
         </div>
-        <div class="form-group">           
+        <div class="form-group" style="font-family: 'Times New Roman'">           
             <label for="Password">Password:</label>
             <input asp-for="admin.Password" type="Password" id="Password" name="Password" />
             <span asp-validation-for="admin.Password" class="text-danger"></span>
@@ -36,5 +38,5 @@
     </div>
     <text> </text>
 
-    <button type="submit">Login</button>
+    <button type="submit" style="font-family: 'Times New Roman';">Login</button>
 </form>
