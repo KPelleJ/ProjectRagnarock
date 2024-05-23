@@ -4,6 +4,7 @@ using ProjectRagnarock.Models;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using System.Diagnostics;
 
 
 namespace ProjectRagnarock.Pages.MuseTales
@@ -19,7 +20,7 @@ namespace ProjectRagnarock.Pages.MuseTales
         {
             _expoRepository = expoRepository;
             Environment = environment;
-            Expo = new Expo(); ;
+            //Expo = new Expo(); ;
             AllExpos = _expoRepository.GetAll();
         }
 
@@ -93,6 +94,7 @@ namespace ProjectRagnarock.Pages.MuseTales
 
         public IActionResult OnPostCreate(List<IFormFile> PicturePath, List<IFormFile> SoundFilePath)
         {
+
             //if (!ModelState.IsValid)
             //{
             //    return Page();
