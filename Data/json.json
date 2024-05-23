@@ -1,23 +1,44 @@
 [
   {
-    "Id": 1,
     "Name": "John Dillermand",
     "Description": "Halløj",
     "SoundFilePath": "Voicy_Chinese food.mp3",
-    "PicturePath": "Dannebrog.png"
+    "PicturePath": "Dannebrog.png",
+    "Id": 1
   },
   {
-    "Id": 2,
     "Name": "Disco 1234",
     "Description": "Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn .",
     "SoundFilePath": "naked.wav",
-    "PicturePath": "Disco.jpg"
+    "PicturePath": "Disco.jpg",
+    "Id": 2
   },
   {
-    "Id": 3,
     "Name": "Pølse",
     "Description": "pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse pølse .",
     "SoundFilePath": "naked.wav",
-    "PicturePath": "PsykRock.png"
+    "PicturePath": "PsykRock.png",
+    "Id": 3
+  },
+  {
+    "Name": "Nickelback",
+    "Description": "Det er satme ulækkert.",
+    "SoundFilePath": "Føj.jpg",
+    "PicturePath": "Føj.jpg",
+    "Id": 4
+  },
+  {
+    "Name": "Pølsemix",
+    "Description": "For helvet",
+    "SoundFilePath": "HugeFart.mp3",
+    "PicturePath": "wallhaven-120524.jpg",
+    "Id": 5
+  },
+  {
+    "Name": "ekakejwe",
+    "Description": "wejaejjewa",
+    "SoundFilePath": "HugeFart.mp3",
+    "PicturePath": "Føj.jpg",
+    "Id": 0
   }
 ]
