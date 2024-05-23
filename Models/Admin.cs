@@ -7,7 +7,6 @@
 
         public string Username
         { get { return _username; } }
-
         public string Password 
         { get { return _password; } }
     }

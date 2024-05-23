@@ -18,10 +18,8 @@ namespace ProjectRagnarock.Models
             _soundFilePath = soundFilePath;
             _picturePath = picturePath;
         }
-
         public Expo()
         { 
-
         }
 
         public string Name 
@@ -29,25 +27,20 @@ namespace ProjectRagnarock.Models
           get { return _name; } 
           set { _name = value; }
         }
-
         public string Description 
         { 
             get { return _description; }
             set { _description = value; }
         }
-
         public string SoundFilePath
         { 
             get { return _soundFilePath; } 
             set { _soundFilePath = value; }
         }
-
         public string PicturePath
         { 
             get { return _picturePath; } 
             set { _picturePath = value; }
         }
-
-        
     }
 }

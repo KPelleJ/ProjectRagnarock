@@ -17,9 +17,6 @@ namespace ProjectRagnarock.Models
             codes.Add("9999");
             codes.Add("4321");
         }
-
-        
-
         public List<string> GetAll() 
         { 
             return codes; 

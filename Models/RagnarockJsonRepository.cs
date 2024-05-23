@@ -4,6 +4,7 @@ namespace ProjectRagnarock.Models
 {
     public class RagnarockJsonRepository : IExpoRepository
     {
+        //JsonFilePath er stien hvor vores json fil ligger
         string JsonFilePath = @"C:\Project Ragnarock\Data\json.json";
         private string _businessName;
         private string _logoImagePath;
@@ -11,6 +12,7 @@ namespace ProjectRagnarock.Models
         private List<Expo> _expos;
         public RagnarockJsonRepository()
         {
+            //Vi har valgt at bruge Json som en database, og her sender vi hele listen med i construktøren
             _expos = JsonReader.ReadJson(JsonFilePath);
         }
 
@@ -22,13 +24,12 @@ namespace ProjectRagnarock.Models
         { get { return _businessDescription; } }
         public List<Expo> Expos
         { get { return _expos; } }
-
         public void CreateExpo(Expo expo)
         {
             _expos.Add(expo);
             JsonWriter.WriteToJson(_expos, JsonFilePath);
         }
-
+        //Vi tilføjer et Id til hver af vores expos, for at sørge for vi altid har fat i det rigtige expo
         public void ExpoId()
         {
             int counter = 1;
@@ -38,12 +39,10 @@ namespace ProjectRagnarock.Models
                 counter++;
             }
         }
-
         public List<Expo> GetAll()
         {
             return _expos;
         }
-
         public void RemoveExpo(int id)
         {
             foreach (Expo expo in _expos)
@@ -56,7 +55,6 @@ namespace ProjectRagnarock.Models
             }
             JsonWriter.WriteToJson(_expos, JsonFilePath);
         }
-         
         public void UpdateExpo(Expo expo)
         {
             foreach (Expo ex in _expos)
@@ -71,7 +69,6 @@ namespace ProjectRagnarock.Models
                     JsonWriter.WriteToJson(_expos, JsonFilePath);
                 }
             }
-            //JsonReader.ReadJson(JsonFilePath);
         }
     }
 }
