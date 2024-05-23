@@ -33,7 +33,11 @@ body {
     width: 100%;
     margin: auto;
 }
-
+.card-img-top {
+    height: 200px; 
+    object-fit: cover; 
+}
+}
 
 
 
