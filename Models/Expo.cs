@@ -8,7 +8,8 @@ namespace ProjectRagnarock.Models
     {
         public Expo()
         {
-            
+            SoundFilePath = ".";
+            PicturePath = ".";
         }
 
         [Required]

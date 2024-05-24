@@ -1,15 +1,15 @@
 [
   {
-    "Name": "John Dillermand",
-    "Description": "Halløj",
-    "SoundFilePath": "Voicy_Chinese food.mp3",
-    "PicturePath": "Dannebrog.png",
+    "Name": "test test 2",
+    "Description": "testing",
+    "SoundFilePath": "HugeFart.mp3",
+    "PicturePath": "Føj.jpg",
     "Id": 1
   },
   {
     "Name": "Disco 1234",
     "Description": "Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn Super disko dansn .",
-    "SoundFilePath": "naked.wav",
+    "SoundFilePath": "and-his-name-is_1.mp3",
     "PicturePath": "Disco.jpg",
     "Id": 2
   },
@@ -28,17 +28,17 @@
     "Id": 4
   },
   {
-    "Name": "Pølsemix",
-    "Description": "For helvet",
-    "SoundFilePath": "HugeFart.mp3",
-    "PicturePath": "wallhaven-120524.jpg",
+    "Name": "Jazzed in my pants.",
+    "Description": "Jazzen har sin oprindelse i et krydsfelt mellem europæiske og afroamerikanske musiktraditioner. Tidlige eksempler på denne syntese er ragtime, blues og gospel. Der var som udgangspunkt tale om udpræget gehør-musik, som i 1800-tallet blev spillet uden noder på de mange forskellige brugte musikinstrumenter, der i Sydstaterne for forholdsvis billige penge overalt i de større byers marskandiserbutikker pludselig blev tilgængelige for selv den fattigste menigmand blandt den farvede befolkning. Årsagen hertil skyldtes overvejende de mange opløste militærorkestre hos den tabende part (Sydstaterne) efter afslutningen på Den amerikanske Borgerkrig i 1865. Noder var derimod anderledes dyre at købe, og musikundervisning var kun noget, som overklasssen og middelklassen[4] havde råd til. Et veludviklet godt gehør[5] var derfor nærmest et uomgængeligt krav for at kunne indgå i et orkestermæssigt samspil af den art.\r\n\r\nSelvom grammofonen (pladespilleren) allerede var blevet kommercielt tilgængelig tilbage i 1910, hvor den afløste fonografen (i handelen fra ca. 1895), blev den første grammofonplade med jazzmusik dog først indspillet i 1917, hvilket skete i New York med The Original Dixieland Jazz Band for pladeselskabet Victor. Orkestret var på dette tidspunkt et af de endnu kun ganske få hvide jazzbands i New Orleans med lutter hvide musikere, og de blev af den grund foretrukket i grammofonstudierne på bekostning af de langt flere sorte jazzmusikere at vælge imellem. Det hævdedes dog blandt mange sorte jazzmusikere fra den periode, at trompetisten og orkesterlederen Buddy Bolden allerede i 1897 indspillede et afkortet jazznummer på en fonograf-tromle, fremstillet af en lokal ingeniør i New Orleans; men at alle kopierne af tromlen desværre siden er bortkommet. Først i 1922 lykkedes det omsider et afro-amerikansk dixieland-orkester fra New Orleans, The Original Creole Jazz Band med trombonisten Kid Ory som orkesterleder.",
+    "SoundFilePath": "THE HISTORY OF JAZZ.mp3",
+    "PicturePath": "Jazz history.jpg",
     "Id": 5
   },
   {
-    "Name": "ekakejwe",
-    "Description": "wejaejjewa",
+    "Name": "Test",
+    "Description": "Test test",
     "SoundFilePath": "HugeFart.mp3",
-    "PicturePath": "Føj.jpg",
-    "Id": 0
+    "PicturePath": "poop-emoji.jpg",
+    "Id": 6
   }
 ]

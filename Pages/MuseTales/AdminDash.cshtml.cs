@@ -94,11 +94,12 @@ namespace ProjectRagnarock.Pages.MuseTales
 
         public IActionResult OnPostCreate(List<IFormFile> PicturePath, List<IFormFile> SoundFilePath)
         {
+            Debug.WriteLine(Expo.PicturePath, Expo.PicturePath);
 
-            //if (!ModelState.IsValid)
-            //{
-            //    return Page();
-            //}
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
             UploadPic(PicturePath);
             UploadSound(SoundFilePath);
@@ -109,10 +110,13 @@ namespace ProjectRagnarock.Pages.MuseTales
 
         public IActionResult OnPostUpdate(List<IFormFile> PicturePath, List<IFormFile> SoundFilePath)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return Page();
-            //}
+            Debug.WriteLine(Expo.PicturePath, Expo.PicturePath);
+
+
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
             UploadPic(PicturePath);
             UploadSound(SoundFilePath);

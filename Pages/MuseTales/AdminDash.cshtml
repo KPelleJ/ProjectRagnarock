@@ -66,32 +66,31 @@
                         </div>
                         <div class="modal-body">
                             <form asp-page-handler="update" method="post" enctype="multipart/form-data">
-                                <div class="row">
-                                    <div class="col">
-                                        <label>Expo navn</label>
-                                        <span class="text-danger" asp-validation-for="@item.Name"></span>
-                                        <input class="form-control" type="text" asp-for="Expo.Name" name="Name" value="@item.Name" />
-                                    </div>
-                                </div>
                                 <div class="row align-items-center">
-                                    <div class="col">
-                                        <label>Oplæsningen i tekstform</label>
-                                        <span class="text-danger" asp-validation-for="@item.Description"></span>
-                                        <textarea class="form-control" asp-for="@item.Description" name="Description" rows="6"></textarea>
+                                    <div class="form-group">
+                                        <label asp-for="Expo.Name" class="control-label">Expo navn</label>
+                                        <input asp-for="Expo.Name" type="text" class="form-control" name="Name" value="@item.Name"/>
+                                        <span asp-validation-for="@Model.Expo.Name" class="text-danger"></span>
+                                    </div>
+                                    <div class="row align-items-center">
+                                    <div class="form-group">
+                                            <label asp-for="@Model.Expo.Description">Oplæsningen i tekstform</label>
+                                            <textarea asp-for="@item.Description" class="form-control" name="Description" rows="6"></textarea>
+                                            <span asp-validation-for="@Model.Expo.Description" class="text-danger"></span>
                                     </div>
 
-                                    <div class="row">
-                                        <label>Upload billede til udstillingen</label>
-                                        <span class="text-danger" asp-validation-for="@item.PicturePath"></span>
-                                        <input asp-for="Expo.PicturePath" class="form-control form-control-sm" type="file" name="PicturePath">
+                                    <div class="form-group">
+                                            <label asp-for="@Model.Expo.PicturePath">Upload billede til udstillingen</label>
+                                            <input asp-for="@Model.Expo.PicturePath" class="form-control form-control-sm" type="file" name="PicturePath">
+                                            <span asp-validation-for="@Model.Expo.PicturePath" class="text-danger"></span>
                                     </div>
-
-                                    <div class="row">
-                                        <label>Upload lydfil til oplæsning</label>
-                                        <span class="text-danger" asp-validation-for="@item.SoundFilePath"></span>
-                                        <input asp-for="Expo.SoundFilePath" class="form-control form-control-sm" type="file" name="SoundFilePath">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Expo.SoundFilePath">Upload lydfil til oplæsning</label>
+                                        <input asp-for="@Model.Expo.SoundFilePath" class="form-control form-control-sm" type="file" name="SoundFilePath">
+                                        <span asp-validation-for="@Model.Expo.SoundFilePath" class="text-danger"></span>
                                     </div>
                                 </div>
+
                                 <input type="hidden" name="id" value="@item.Id" />
                                 <button class="form-control" type="submit">opdater</button>
                                 <div asp-validation-summary="All"></div>
@@ -132,13 +131,13 @@
 
                         <div class="form-group">
                             <label asp-for="@Model.Expo.PicturePath">Upload billede til udstillingen</label>
-                            <input asp-for="@Model.Expo.PicturePath" class="form-control form-control-sm" type="file" name="PicturePath">
+                            <input asp-for="@Model.Expo.PicturePath" class="form-control form-control-sm" type="file" name="PicturePath" value="~/Images/">
                             <span asp-validation-for="@Model.Expo.PicturePath" class="text-danger"></span>
                         </div>
 
                         <div class="form-group">
                             <label asp-for="@Model.Expo.SoundFilePath">Upload lydfil til oplæsning</label>
-                            <input asp-for="@Model.Expo.SoundFilePath" class="form-control form-control-sm" type="file" name="SoundFilePath">
+                            <input asp-for="@Model.Expo.SoundFilePath" class="form-control form-control-sm" type="file" name="SoundFilePath" value="~/Sound/">
                             <span asp-validation-for="@Model.Expo.SoundFilePath" class="text-danger"></span>
                         </div>
                     </div>
