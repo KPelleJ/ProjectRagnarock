@@ -6,24 +6,30 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="container" style="text-align: center;">
-    <div class="text-box" style="font-size: 14px; font-family: 'Times New Roman', Times, serif">
-        <p>
-            Se, lyt og dans dig gennem fortællinger fra syv årtiers pop- og rockhistorie.<br />
-            Tag med Steffen Brandt ind i TV-2s originale lydstudie og kom tæt på D-A-Ds ikoniske raketbas. Oplev Natasjas originale, håndskrevne udkast til ”Gi’ mig Danmark tilbage” og få fortællingen om, hvad en skuffet fan af Otto Brandenburg kan finde på.<br />
-            Træd ind i den spektakulære guldbygning, mærk energien fra de største danske navne og kom helt tæt på de kreative kræfter, som har formet din musik.<br />
-            RAGNAROCKs udstilling er smækfyldt med fortællinger om den musik, som gennem generationer har samlet tusindvis af fans og skabt soundtracket til fællesskaber, opbrud og ungdomsliv.<br />
-            Her må du både danse og synge. Du må skrue på knapper, styre lys og mixe. Og når du trænger til en slapper, kan du tage en tur på den gigantiske, roterende pladespiller.<br />
-        </p>
+<div class="container">
+
+    <div class="container-front">
+    <img src="~/Images/RagnarockFront.png" style="width:100%"/>
+    <div class="bottom-center">
+            <form method="post" class="input-box" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                <label asp-for="customers.Pincode" style="text-shadow: 0 0 3px black, 0 0 5px black">Indtast kode her:</label>
+                <input type="password" asp-for="customers.Pincode" placeholder="Indtast kode her" class="form-control small-input" maxlength="4" style="text-align: center; font-size: 11px; />
+                <span class="text-danger" asp-validation-for="customers.Pincode"></span></br>
+                <input type="submit" style="color: black; background-color: #B28228; border-color: #B28228;" class="btn btn-primary" value="Oplev" />
+            </form>
     </div>
-    
-    <form method="post" class="input-box" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
-        <label asp-for="customers.Pincode">Indsæt kode her:</label>
-        <input type="password" asp-for="customers.Pincode" class="form-control small-input" maxlength="4" style="text-align: center;" />
-        <span class="text-danger" asp-validation-for="customers.Pincode"></span></br>
-        <input type="submit" style="color: black; background-color: #B28228; border-color: #B28228;" class="btn btn-primary" value="Oplev" />
-    </form>
+    </div>
+</div>
+
+<div class="text-box" style="font-size: 14px; margin-top: 50px; font-family: 'Times New Roman', Times, serif">
+    <p>
+        Se, lyt og dans dig gennem fortællinger fra syv årtiers pop- og rockhistorie.<br />
+        Tag med Steffen Brandt ind i TV-2s originale lydstudie og kom tæt på D-A-Ds ikoniske raketbas. Oplev Natasjas originale, håndskrevne udkast til ”Gi’ mig Danmark tilbage” og få fortællingen om, hvad en skuffet fan af Otto Brandenburg kan finde på.<br />
+        Træd ind i den spektakulære guldbygning, mærk energien fra de største danske navne og kom helt tæt på de kreative kræfter, som har formet din musik.<br />
+        RAGNAROCKs udstilling er smækfyldt med fortællinger om den musik, som gennem generationer har samlet tusindvis af fans og skabt soundtracket til fællesskaber, opbrud og ungdomsliv.<br />
+        Her må du både danse og synge. Du må skrue på knapper, styre lys og mixe. Og når du trænger til en slapper, kan du tage en tur på den gigantiske, roterende pladespiller.<br />
+    </p>
 </div>
 
 <style>
@@ -53,6 +59,7 @@
     .small-input {
         text-align: center;
         width: 120px;
+        color: black;
     }
 
 </style>

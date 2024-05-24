@@ -49,3 +49,34 @@ body {
 #myAudio{
     filter: invert(1);
 }
+
+.container-front {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-center {
+    width:100%;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: auto;
+}
+
+.input-box{
+    
+}
+
+.form-control small-input{
+    font-size:large;
+}
+
+::placeholder{
+    box-shadow:black;
+}
+input::placeholder{
+    color: black;
+    opacity: 1;
+}
