@@ -47,10 +47,10 @@
                             Er du sikker på du vil slette denne expo?
                         </div>
                         <div class="modal-footer">
-                            <button type="button" style="font-family: 'Times New Roman';" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" style="font-family: 'Times New Roman';" class="btn btn-secondary" data-bs-dismiss="modal">Fortryd</button>
                             <form asp-page-handler="delete" method="post">
                                 <input type="hidden" name="id" value="@item.Id" />
-                                <button type="submit" style="font-family: 'Times New Roman';" class="btn btn-danger">Delete</button>
+                                <button type="submit" style="font-family: 'Times New Roman';" class="btn btn-danger">Slet</button>
                             </form>
                         </div>
                     </div>
@@ -91,13 +91,13 @@
                                     </div>
                                 </div>
 
-                                <input type="hidden" name="id" value="@item.Id" />
-                                <button class="form-control" type="submit">opdater</button>
+                                    <input type="hidden" name="id" value="@item.Id" />
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" type="submit">Opdater</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fortryd</button>
+                                    </div>
                                 <div asp-validation-summary="All"></div>
                             </form>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -149,11 +149,11 @@
                         }
                     }
                     <input type="hidden" name="id" value="@count" />
-                    <button class="form-control" type="submit">opret</button>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="submit">Opret</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fortryd</button>
+                    </div>
                 </form>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
             </div>
         </div>
     </div>

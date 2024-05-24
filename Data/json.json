@@ -35,10 +35,17 @@
     "Id": 5
   },
   {
-    "Name": "Test",
-    "Description": "Test test",
-    "SoundFilePath": "HugeFart.mp3",
-    "PicturePath": "Føj.jpg",
+    "Name": "Søs Fenger",
+    "Description": "Et eller andet.",
+    "SoundFilePath": "and-his-name-is_1.mp3",
+    "PicturePath": "Pizza.webp",
     "Id": 6
+  },
+  {
+    "Name": "test",
+    "Description": "12345",
+    "SoundFilePath": "Voicy_gnome sound.mp3",
+    "PicturePath": "Dannebrog.png",
+    "Id": 0
   }
 ]
