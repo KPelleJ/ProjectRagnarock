@@ -7,7 +7,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<div class="container"><button type="button" class="btn btn-success" style="font-family: 'Times New Roman';" data-bs-toggle="modal" data-bs-target="#createModal">Opret ny expo</button></div>
+<div class="container"><button type="button" class="btn btn-success" style="font-family: 'Times New Roman';" data-bs-toggle="modal" data-bs-target="#createModal">Opret ny udstilling</button></div>
 
 <table class="table" style="font-family: 'Times New Roman';">
     <thead>
@@ -40,11 +40,11 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" style="font-family: 'Times New Roman';"id="deleteModalLabel">Delete expo</h1>
+                            <h1 class="modal-title fs-5" style="font-family: 'Times New Roman';"id="deleteModalLabel">Slet udstilling</h1>
                             <button type="button" class="btn-close" style="font-family: 'Times New Roman';" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div style="font-family: 'Times New Roman';" class="modal-body">
-                            Er du sikker på du vil slette denne expo?
+                            Er du sikker på du vil slette denne udstilling?
                         </div>
                         <div class="modal-footer">
                             <button type="button" style="font-family: 'Times New Roman';" class="btn btn-secondary" data-bs-dismiss="modal">Fortryd</button>
@@ -61,14 +61,14 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" style="font-family: 'Times New Roman';" id="updateModalLabel">Opdater expo</h1>
+                            <h1 class="modal-title fs-5" style="font-family: 'Times New Roman';" id="updateModalLabel">Opdater udstilling</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form asp-page-handler="update" method="post" enctype="multipart/form-data">
                                 <div class="row align-items-center">
                                     <div class="form-group">
-                                        <label asp-for="Expo.Name" class="control-label">Expo navn</label>
+                                        <label asp-for="Expo.Name" class="control-label">Udstillings navn</label>
                                         <input asp-for="Expo.Name" type="text" class="form-control" name="Name" value="@item.Name"/>
                                         <span asp-validation-for="@Model.Expo.Name" class="text-danger"></span>
                                     </div>
@@ -110,14 +110,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="createModalLabel">Opret en ny expo</h1>
+                <h1 class="modal-title fs-5" id="createModalLabel">Opret en ny udstilling</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form asp-page-handler="create" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="form-group">
-                            <label asp-for="@Model.Expo.Name" class="control-label">Expo navn</label>
+                            <label asp-for="@Model.Expo.Name" class="control-label">Udstillings navn</label>
                             <input asp-for="@Model.Expo.Name" type="text" class="form-control"/>
                             <span asp-validation-for="@Model.Expo.Name" class="text-danger"></span>
                         </div>
